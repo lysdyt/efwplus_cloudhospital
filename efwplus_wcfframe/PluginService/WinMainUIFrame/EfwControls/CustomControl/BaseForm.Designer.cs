@@ -58,24 +58,19 @@
             this.imageList1.Images.SetKeyName(0, "openfolderHS.png");
             this.imageList1.Images.SetKeyName(1, "field.png");
             // 
-            // BaseForm
+            // BaseFormEx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 532);
             this.Controls.Add(this.BasepanelEx);
-            this.KeyPreview = true;
-            this.Name = "BaseForm";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "BaseForm";
+            this.Name = "BaseFormEx";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        public DevComponents.DotNetBar.PanelEx BasepanelEx;
         protected System.Windows.Forms.ImageList imageList1;
-
+        public DevComponents.DotNetBar.PanelEx BasepanelEx;
     }
 }

@@ -653,125 +653,125 @@
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.CollectionConverter">
             <summary>
-            CollectionConverter 用于转换集合内的元素或集合类型。
+            CollectionConverter ÓÃÓÚ×ª»»¼¯ºÏÄÚµÄÔªËØ»ò¼¯ºÏÀàÐÍ¡£
             </summary>
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionConverter.ConvertAll``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
             <summary>
-            ConvertAll 将source中的每个元素转换为TResult类型
+            ConvertAll ½«sourceÖÐµÄÃ¿¸öÔªËØ×ª»»ÎªTResultÀàÐÍ
             </summary>       
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionConverter.ConvertSpecification``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Predicate{``0})">
             <summary>
-            ConvertSpecification 将source中的符合predicate条件元素转换为TResult类型
+            ConvertSpecification ½«sourceÖÐµÄ·ûºÏpredicateÌõ¼þÔªËØ×ª»»ÎªTResultÀàÐÍ
             </summary>       
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionConverter.ConvertFirstSpecification``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Predicate{``0})">
             <summary>
-            ConvertSpecification 将source中的符合predicate条件的第一个元素转换为TResult类型
+            ConvertSpecification ½«sourceÖÐµÄ·ûºÏpredicateÌõ¼þµÄµÚÒ»¸öÔªËØ×ª»»ÎªTResultÀàÐÍ
             </summary>       
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionConverter.ConvertListUpper``2(System.Collections.Generic.IList{``1})">
             <summary>
-            ConvertListUpper 将子类对象集合转换为基类对象集合
+            ConvertListUpper ½«×ÓÀà¶ÔÏó¼¯ºÏ×ª»»Îª»ùÀà¶ÔÏó¼¯ºÏ
             </summary>        
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionConverter.ConvertListDown``2(System.Collections.Generic.IList{``0})">
             <summary>
-            ConvertListDown 将基类对象集合强制转换为子类对象集合
+            ConvertListDown ½«»ùÀà¶ÔÏó¼¯ºÏÇ¿ÖÆ×ª»»Îª×ÓÀà¶ÔÏó¼¯ºÏ
             </summary>        
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionConverter.ConvertArrayToList``1(``0[])">
             <summary>
-            ConverArrayToList 将数组转换为IList
+            ConverArrayToList ½«Êý×é×ª»»ÎªIList
             </summary>      
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionConverter.ConvertListToArray``1(System.Collections.Generic.IList{``0})">
             <summary>
-            ConverListToArray 将IList转换为数组
+            ConverListToArray ½«IList×ª»»ÎªÊý×é
             </summary>      
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionHelper.Find``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">
             <summary>
-            Find 从集合中选取符合条件的元素
+            Find ´Ó¼¯ºÏÖÐÑ¡È¡·ûºÏÌõ¼þµÄÔªËØ
             </summary>       
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionHelper.FindFirstSpecification``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">
             <summary>
-            FindFirstSpecification 返回符合条件的第一个元素
+            FindFirstSpecification ·µ»Ø·ûºÏÌõ¼þµÄµÚÒ»¸öÔªËØ
             </summary>      
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionHelper.ContainsSpecification``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0},``0@)">
             <summary>
-            ContainsSpecification 集合中是否包含满足predicate条件的元素。
+            ContainsSpecification ¼¯ºÏÖÐÊÇ·ñ°üº¬Âú×ãpredicateÌõ¼þµÄÔªËØ¡£
             </summary>       
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionHelper.ContainsSpecification``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">
             <summary>
-            ContainsSpecification 集合中是否包含满足predicate条件的元素。
+            ContainsSpecification ¼¯ºÏÖÐÊÇ·ñ°üº¬Âú×ãpredicateÌõ¼þµÄÔªËØ¡£
             </summary>       
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionHelper.ActionOnSpecification``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Predicate{``0})">
             <summary>
-            ActionOnSpecification 对集合中满足predicate条件的元素执行action。如果没有条件，predicate传入null。
+            ActionOnSpecification ¶Ô¼¯ºÏÖÐÂú×ãpredicateÌõ¼þµÄÔªËØÖ´ÐÐaction¡£Èç¹ûÃ»ÓÐÌõ¼þ£¬predicate´«Èënull¡£
             </summary>       
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionHelper.ActionOnEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
             <summary>
-            ActionOnEach  对集合中的每个元素执行action。
+            ActionOnEach  ¶Ô¼¯ºÏÖÐµÄÃ¿¸öÔªËØÖ´ÐÐaction¡£
             </summary>        
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionHelper.BinarySearch``1(System.Collections.Generic.IList{``0},``0,System.Int32@)">
             <summary>
-            BinarySearch 从已排序的列表中，采用二分查找找到目标在列表中的位置。
-            如果刚好有个元素与目标相等，则返回true，且minIndex会被赋予该元素的位置；否则，返回false，且minIndex会被赋予比目标小且最接近目标的元素的位置
+            BinarySearch ´ÓÒÑÅÅÐòµÄÁÐ±íÖÐ£¬²ÉÓÃ¶þ·Ö²éÕÒÕÒµ½Ä¿±êÔÚÁÐ±íÖÐµÄÎ»ÖÃ¡£
+            Èç¹û¸ÕºÃÓÐ¸öÔªËØÓëÄ¿±êÏàµÈ£¬Ôò·µ»Øtrue£¬ÇÒminIndex»á±»¸³Óè¸ÃÔªËØµÄÎ»ÖÃ£»·ñÔò£¬·µ»Øfalse£¬ÇÒminIndex»á±»¸³Óè±ÈÄ¿±êÐ¡ÇÒ×î½Ó½üÄ¿±êµÄÔªËØµÄÎ»ÖÃ
             </summary>       
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionHelper.GetIntersection``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
             <summary>
-            GetIntersection 高效地求两个List元素的交集。
+            GetIntersection ¸ßÐ§µØÇóÁ½¸öListÔªËØµÄ½»¼¯¡£
             </summary>        
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.CollectionHelper.GetUnion``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})">
             <summary>
-            GetUnion 高效地求两个List元素的并集。
+            GetUnion ¸ßÐ§µØÇóÁ½¸öListÔªËØµÄ²¢¼¯¡£
             </summary> 
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.EnumDescription">
             <summary>
-            EnumDescription 用于描述枚举的特性。	
+            EnumDescription ÓÃÓÚÃèÊöÃ¶¾ÙµÄÌØÐÔ¡£	
             </summary>
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.EnumDescription.DoGetFieldTexts(System.Type)">
             <summary>
-            DoGetFieldTexts 得到枚举类型定义的所有枚举值的描述文本		
+            DoGetFieldTexts µÃµ½Ã¶¾ÙÀàÐÍ¶¨ÒåµÄËùÓÐÃ¶¾ÙÖµµÄÃèÊöÎÄ±¾		
             </summary>	
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.EnumDescription.GetEnumDescriptionText(System.Type)">
             <summary>
-            GetEnumDescriptionText 获取枚举类型的描述文本。
+            GetEnumDescriptionText »ñÈ¡Ã¶¾ÙÀàÐÍµÄÃèÊöÎÄ±¾¡£
             </summary>	   
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.EnumDescription.GetEnumTag(System.Type)">
             <summary>
-            GetEnumTag 获取枚举类型携带的Tag。
+            GetEnumTag »ñÈ¡Ã¶¾ÙÀàÐÍÐ¯´øµÄTag¡£
             </summary>
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.EnumDescription.GetFieldText(System.Object)">
             <summary>
-            GetFieldDescriptionText 获得指定枚举值的描述文本。
+            GetFieldDescriptionText »ñµÃÖ¸¶¨Ã¶¾ÙÖµµÄÃèÊöÎÄ±¾¡£
             </summary>		
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.EnumDescription.GetFieldTag(System.Object)">
             <summary>
-            GetFieldTag 获得指定枚举值的Tag。
+            GetFieldTag »ñµÃÖ¸¶¨Ã¶¾ÙÖµµÄTag¡£
             </summary>
             <param name="enumValue"></param>
             <returns></returns>
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.EnumDescription.GetEnumValueByTag(System.Type,System.Object)">
             <summary>
-            GetEnumValueByTag 根据描述Tag获取对应的枚举值
+            GetEnumValueByTag ¸ù¾ÝÃèÊöTag»ñÈ¡¶ÔÓ¦µÄÃ¶¾ÙÖµ
             </summary>     
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.ITimingTaskExcuter">
@@ -786,61 +786,61 @@
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.Date">
             <summary>
-            Date 表示年月日。
+            Date ±íÊ¾ÄêÔÂÈÕ¡£
             </summary>
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.DateScope">
             <summary>
-            DateScope 日期范围
+            DateScope ÈÕÆÚ·¶Î§
             zhuweisky 2007.03.15
             </summary>
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.DateScope.Contains(EFWCoreLib.CoreFrame.Common.Date)">
             <summary>
-            Contains 目标时刻是否在时间范围内
+            Contains Ä¿±êÊ±¿ÌÊÇ·ñÔÚÊ±¼ä·¶Î§ÄÚ
             </summary>       
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.DateTimeScope">
             <summary>
-            DateTimeScope 时间范围。
+            DateTimeScope Ê±¼ä·¶Î§¡£
             zhuweisky
             </summary>
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.ShortTime">
             <summary>
-            ShortTime 用于指定小时、分钟、秒。比如上班时间、下班时间。
+            ShortTime ÓÃÓÚÖ¸¶¨Ð¡Ê±¡¢·ÖÖÓ¡¢Ãë¡£±ÈÈçÉÏ°àÊ±¼ä¡¢ÏÂ°àÊ±¼ä¡£
             zhuweisky 2007.01.08
             </summary>
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.ShortTime.IsOnTime(System.DateTime,System.Int32)">
             <summary>
-            IsOnTime 目标时间是否与当前对象所表示的时间的差值是否在maxToleranceInSecs范围之内。
+            IsOnTime Ä¿±êÊ±¼äÊÇ·ñÓëµ±Ç°¶ÔÏóËù±íÊ¾µÄÊ±¼äµÄ²îÖµÊÇ·ñÔÚmaxToleranceInSecs·¶Î§Ö®ÄÚ¡£
             </summary>       
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.ShortTimeScope">
             <summary>
-            ShortTimeScope 时间范围。
+            ShortTimeScope Ê±¼ä·¶Î§¡£
             zhuweisky 2007.01.08
             </summary>
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.ShortTimeScope.Contains(EFWCoreLib.CoreFrame.Common.ShortTime)">
             <summary>
-            Contains 目标时刻是否在时间范围内
+            Contains Ä¿±êÊ±¿ÌÊÇ·ñÔÚÊ±¼ä·¶Î§ÄÚ
             </summary>       
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.TimeHelper">
             <summary>
-            TimeHelper 与DateTime相关的工具类
+            TimeHelper ÓëDateTimeÏà¹ØµÄ¹¤¾ßÀà
             </summary>
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.TimeHelper.IsOnTime(System.DateTime,System.DateTime,System.Int32)">
             <summary>
-            IsOnTime 时间val与requiredTime之间的差值是否在maxToleranceInSecs范围之内。
+            IsOnTime Ê±¼ävalÓërequiredTimeÖ®¼äµÄ²îÖµÊÇ·ñÔÚmaxToleranceInSecs·¶Î§Ö®ÄÚ¡£
             </summary>        
         </member>
         <member name="M:EFWCoreLib.CoreFrame.Common.TimeHelper.IsOnTime(System.DateTime,System.DateTime,System.Int32,System.Int32)">
             <summary>
-            IsOnTime 对于循环调用，时间val与startTime之间的差值(>0)对cycleSpanInSecs求余数的结果是否在maxToleranceInSecs范围之内。
+            IsOnTime ¶ÔÓÚÑ­»·µ÷ÓÃ£¬Ê±¼ävalÓëstartTimeÖ®¼äµÄ²îÖµ(>0)¶ÔcycleSpanInSecsÇóÓàÊýµÄ½á¹ûÊÇ·ñÔÚmaxToleranceInSecs·¶Î§Ö®ÄÚ¡£
             </summary>        
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.Week">
@@ -881,7 +881,7 @@
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Common.TimingTaskType">
             <summary>
-            TimingTaskType 定时任务的类型 
+            TimingTaskType ¶¨Ê±ÈÎÎñµÄÀàÐÍ 
             </summary>
         </member>
         <member name="T:EFWCoreLib.CoreFrame.Init.AttributeManager.EntityManager">
@@ -3913,76 +3913,45 @@
             关闭所有连接
             </summary>
         </member>
-        <member name="T:EFWCoreLib.WebFrame.WebAPI.FileController">
+        <member name="T:EFWCoreLib.WebFrame.HttpHandler.WebResponseData">
             <summary>
-            WepApi 文件传输
-            /efwplusApi/coresys/file/
+            Web输出数据对象
             </summary>
         </member>
-        <member name="T:EFWCoreLib.WebFrame.WebAPI.LoginController">
+        <member name="P:EFWCoreLib.WebFrame.HttpHandler.WebResponseData.DataType">
             <summary>
-            WebApi 登陆验证，然后调用wcf服务
-            /efwplusApi/coresys/login/userlogin
-            {"usercode":"admin","password":"1","wcfpluginname":"MainFrame.Service","wcfcontroller":"LoginController","wcfmethod":"UserLogin"}
+            数据类型
             </summary>
         </member>
-        <member name="T:EFWCoreLib.WebFrame.WebAPI.LoginRequest">
+        <member name="P:EFWCoreLib.WebFrame.HttpHandler.WebResponseData.UiframeType">
             <summary>
-            登录请求
+            UI框架
             </summary>
         </member>
-        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.usercode">
+        <member name="P:EFWCoreLib.WebFrame.HttpHandler.WebResponseData.DataResult">
             <summary>
-            用户名
+            数据结果
             </summary>
         </member>
-        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.password">
+        <member name="T:EFWCoreLib.WebFrame.HttpHandler.WebUIFrameType">
             <summary>
-            密码
+            Web界面框架
             </summary>
         </member>
-        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.wcfpluginname">
+        <member name="T:EFWCoreLib.WebFrame.HttpHandler.ResponseDataType">
             <summary>
-            服务插件
+            输出数据类型
             </summary>
         </member>
-        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.wcfcontroller">
+        <member name="T:EFWCoreLib.WebFrame.HttpHandler.treeNode">
             <summary>
-            控制器
+            树形数据，EasyUI
             </summary>
         </member>
-        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.wcfmethod">
+        <member name="T:EFWCoreLib.WebFrame.HttpHandler.treeNodeGrid">
             <summary>
-            方法名
+            树形网格,EasyUI
             </summary>
-        </member>
-        <member name="T:EFWCoreLib.WebFrame.WebAPI.LoginResponse">
-            <summary>
-            登录结果
-            </summary>
-        </member>
-        <member name="T:EFWCoreLib.WebFrame.WebAPI.ServiceController">
-            <summary>
-            WepApi 文件传输
-            /efwplusApi/coresys/service/
-            </summary>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:EFWCoreLib.WebFrame.WebAPI.ServiceController.Get(EFWCoreLib.WebFrame.WebAPI.ServiceParam)" -->
-        <member name="M:EFWCoreLib.WebFrame.WebAPI.ServiceController.Post(EFWCoreLib.WebFrame.WebAPI.ServiceParam)">
-            efwplusApi/coresys/service/post?token=111111
-            {"wcfpluginname":"Books.Service","wcfcontroller":"bookWcfController","wcfmethod":"GetBooks","jsondata":"[]"}
-        </member>
-        <member name="T:EFWCoreLib.WebFrame.WebAPI.PluginHttpControllerSelector">
-            <summary>
-            Represents a area System.Web.Http.Dispatcher.IHttpControllerSelector instance
-            </summary>
-        </member>
-        <member name="M:EFWCoreLib.WebFrame.WebAPI.PluginHttpControllerSelector.SelectController(System.Net.Http.HttpRequestMessage)">
-            <summary>
-            Selects a System.Web.Http.Controllers.HttpControllerDescriptor for the given System.Net.Http.HttpRequestMessage.
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
         </member>
         <member name="T:EFWCoreLib.WebFrame.HttpHandler.AppGlobalHttpModule">
             <summary>
@@ -4055,6 +4024,36 @@
             <summary>
             Form提交的数据
             </summary>
+        </member>
+        <member name="M:EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfService(System.String,System.String,System.String)">
+            <summary>
+            调用wcf服务
+            </summary>
+            <param name="wcfpluginname">插件名称</param>
+            <param name="wcfcontroller">控制器名称</param>
+            <param name="wcfmethod">方法名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfService(System.String,System.String,System.String,System.Action{EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData})">
+            <summary>
+            调用wcf服务
+            </summary>
+            <param name="wcfpluginname"></param>
+            <param name="wcfcontroller"></param>
+            <param name="wcfmethod"></param>
+            <param name="requestAction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfServiceAsync(System.String,System.String,System.String,System.Action{EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData},System.Action{EFWCoreLib.WcfFrame.DataSerialize.ServiceResponseData})">
+            <summary>
+            异步调用wcf服务
+            </summary>
+            <param name="wcfpluginname"></param>
+            <param name="wcfcontroller"></param>
+            <param name="wcfmethod"></param>
+            <param name="requestAction"></param>
+            <param name="responseAction"></param>
+            <returns></returns>
         </member>
         <member name="T:EFWCoreLib.WebFrame.HttpHandler.HttpHandlerInvoker">
             <summary>
@@ -4282,6 +4281,82 @@
         <member name="T:EFWCoreLib.WebFrame.HttpHandler.WebServiceInvoker">
             <summary>
             WebService处理对象
+            </summary>
+        </member>
+        <member name="T:EFWCoreLib.WebFrame.WebAPI.FileController">
+            <summary>
+            WepApi 文件传输
+            /efwplusApi/coresys/file/
+            </summary>
+        </member>
+        <member name="T:EFWCoreLib.WebFrame.WebAPI.LoginController">
+            <summary>
+            WebApi 登陆验证，然后调用wcf服务
+            /efwplusApi/coresys/login/userlogin
+            {"usercode":"admin","password":"1","wcfpluginname":"MainFrame.Service","wcfcontroller":"LoginController","wcfmethod":"UserLogin"}
+            </summary>
+        </member>
+        <member name="T:EFWCoreLib.WebFrame.WebAPI.LoginRequest">
+            <summary>
+            登录请求
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.usercode">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.wcfpluginname">
+            <summary>
+            服务插件
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.wcfcontroller">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WebFrame.WebAPI.LoginRequest.wcfmethod">
+            <summary>
+            方法名
+            </summary>
+        </member>
+        <member name="T:EFWCoreLib.WebFrame.WebAPI.LoginResponse">
+            <summary>
+            登录结果
+            </summary>
+        </member>
+        <member name="T:EFWCoreLib.WebFrame.WebAPI.ServiceController">
+            <summary>
+            WepApi 文件传输
+            /efwplusApi/coresys/service/
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EFWCoreLib.WebFrame.WebAPI.ServiceController.Get(EFWCoreLib.WebFrame.WebAPI.ServiceParam)" -->
+        <member name="M:EFWCoreLib.WebFrame.WebAPI.ServiceController.Post(EFWCoreLib.WebFrame.WebAPI.ServiceParam)">
+            efwplusApi/coresys/service/post?token=111111
+            {"wcfpluginname":"Books.Service","wcfcontroller":"bookWcfController","wcfmethod":"GetBooks","jsondata":"[]"}
+        </member>
+        <member name="T:EFWCoreLib.WebFrame.WebAPI.PluginHttpControllerSelector">
+            <summary>
+            Represents a area System.Web.Http.Dispatcher.IHttpControllerSelector instance
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WebFrame.WebAPI.PluginHttpControllerSelector.SelectController(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Selects a System.Web.Http.Controllers.HttpControllerDescriptor for the given System.Net.Http.HttpRequestMessage.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EFWCoreLib.WebFrame.WebAPI.WebApiController">
+            <summary>
+            WebApi基类控制器
             </summary>
         </member>
         <member name="T:EFWCoreLib.WebFrame.Utility.ExcelHelper">

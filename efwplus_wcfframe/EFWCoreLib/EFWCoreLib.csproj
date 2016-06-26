@@ -50,7 +50,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Output\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -269,6 +269,8 @@
     <Compile Include="WcfFrame\ServerController\RouterServerManage.cs" />
     <Compile Include="WcfFrame\WcfService\Contract\IDistributedCache.cs" />
     <Compile Include="WcfFrame\WcfService\Contract\IHeartbeat.cs" />
+    <Compile Include="WebFrame\HttpHandler\WebRequstData.cs" />
+    <Compile Include="WebFrame\HttpHandler\WebResponseData.cs" />
     <Compile Include="WebFrame\WebAPI\FileController.cs" />
     <Compile Include="WebFrame\WebAPI\LoginController.cs" />
     <Compile Include="WebFrame\WebAPI\PluginAssembliesResolver.cs" />
@@ -278,6 +280,7 @@
     <Compile Include="WebFrame\WebAPI\ShowExceptionFilter.cs" />
     <Compile Include="WebFrame\WebAPI\TimingActionFilter.cs" />
     <Compile Include="WebFrame\WebAPI\UserTokenActionFilter.cs" />
+    <Compile Include="WebFrame\WebAPI\WcfPerformanceController.cs" />
     <Compile Include="WebFrame\WebService\AbstractService.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -502,3 +502,402 @@ Win32 ThreadId:6604
 
 Extended Properties: 
 ----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 01:41:43
+
+Message: HandlingInstanceID: ec4e8067-59f8-4cc9-abf9-a54e175346c1
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/16/2016 09:41:43
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 调用的目标发生了异常。
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 EFWCoreLib.WcfFrame.ClientController.WcfClientController.UI_ControllerEvent(String eventname, Object[] objs)
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 01:41:43
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+	Inner Exception
+	---------------
+	Type : System.MissingMethodException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : 找不到方法:“System.String EFWCoreLib.WcfFrame.ClientController.WcfClientController.ToJson(System.Object[])”。
+	Source : WinMainUIFrame.Winform
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Void UserLogin()
+	HResult : -2146233069
+	Stack Trace :    在 WinMainUIFrame.Winform.Controller.wcfclientLoginController.UserLogin()
+
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.exe
+
+ProcessId: 5932
+
+Process Name: D:\efwplus_cloudhospital\cloudhospital\Output_Client\efwplusClient.exe
+
+Thread Name: 
+
+Win32 ThreadId:6104
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 01:41:55
+
+Message: HandlingInstanceID: 24ad0fce-0994-4ccc-ad78-9a317f2f284b
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/16/2016 09:41:55
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 调用的目标发生了异常。
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 EFWCoreLib.WcfFrame.ClientController.WcfClientController.UI_ControllerEvent(String eventname, Object[] objs)
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 01:41:55
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+	Inner Exception
+	---------------
+	Type : System.MissingMethodException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : 找不到方法:“System.String EFWCoreLib.WcfFrame.ClientController.WcfClientController.ToJson(System.Object[])”。
+	Source : WinMainUIFrame.Winform
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Void UserLogin()
+	HResult : -2146233069
+	Stack Trace :    在 WinMainUIFrame.Winform.Controller.wcfclientLoginController.UserLogin()
+
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.exe
+
+ProcessId: 5932
+
+Process Name: D:\efwplus_cloudhospital\cloudhospital\Output_Client\efwplusClient.exe
+
+Thread Name: 
+
+Win32 ThreadId:6104
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 01:41:58
+
+Message: HandlingInstanceID: f76c5885-2780-4683-9251-184188d35295
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/16/2016 09:41:58
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 调用的目标发生了异常。
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 EFWCoreLib.WcfFrame.ClientController.WcfClientController.UI_ControllerEvent(String eventname, Object[] objs)
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 01:41:58
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+	Inner Exception
+	---------------
+	Type : System.MissingMethodException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : 找不到方法:“System.String EFWCoreLib.WcfFrame.ClientController.WcfClientController.ToJson(System.Object[])”。
+	Source : WinMainUIFrame.Winform
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Void UserLogin()
+	HResult : -2146233069
+	Stack Trace :    在 WinMainUIFrame.Winform.Controller.wcfclientLoginController.UserLogin()
+
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.exe
+
+ProcessId: 5932
+
+Process Name: D:\efwplus_cloudhospital\cloudhospital\Output_Client\efwplusClient.exe
+
+Thread Name: 
+
+Win32 ThreadId:6104
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 01:42:03
+
+Message: HandlingInstanceID: 2131731b-fb1f-49b4-8ee1-021a4732457c
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/16/2016 09:42:03
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 调用的目标发生了异常。
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 EFWCoreLib.WcfFrame.ClientController.WcfClientController.UI_ControllerEvent(String eventname, Object[] objs)
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 01:42:03
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+	Inner Exception
+	---------------
+	Type : System.MissingMethodException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : 找不到方法:“System.String EFWCoreLib.WcfFrame.ClientController.WcfClientController.ToJson(System.Object[])”。
+	Source : WinMainUIFrame.Winform
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Void UserLogin()
+	HResult : -2146233069
+	Stack Trace :    在 WinMainUIFrame.Winform.Controller.wcfclientLoginController.UserLogin()
+
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.exe
+
+ProcessId: 5932
+
+Process Name: D:\efwplus_cloudhospital\cloudhospital\Output_Client\efwplusClient.exe
+
+Thread Name: 
+
+Win32 ThreadId:6104
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 01:43:12
+
+Message: HandlingInstanceID: 4de4388a-58a2-42d8-9bfa-2c593618f58a
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/16/2016 09:43:12
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 调用的目标发生了异常。
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 EFWCoreLib.WcfFrame.ClientController.WcfClientController.UI_ControllerEvent(String eventname, Object[] objs)
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 01:43:12
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+	Inner Exception
+	---------------
+	Type : System.MissingMethodException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : 找不到方法:“System.String EFWCoreLib.WcfFrame.ClientController.WcfClientController.ToJson(System.Object[])”。
+	Source : WinMainUIFrame.Winform
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Void UserLogin()
+	HResult : -2146233069
+	Stack Trace :    在 WinMainUIFrame.Winform.Controller.wcfclientLoginController.UserLogin()
+
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.exe
+
+ProcessId: 4648
+
+Process Name: D:\efwplus_cloudhospital\cloudhospital\Output_Client\efwplusClient.exe
+
+Thread Name: 
+
+Win32 ThreadId:6128
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 02:03:00
+
+Message: HandlingInstanceID: 7fec67b1-ce5d-4303-a420-99734792589e
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+06/16/2016 10:03:00
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 调用的目标发生了异常。
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 EFWCoreLib.WcfFrame.ClientController.WcfClientController.UI_ControllerEvent(String eventname, Object[] objs)
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 02:03:00
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+	Inner Exception
+	---------------
+	Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : 值“WinMainUIFrame.Entity.BaseDeptLayer”不是“WinMainUIFrame.Entity.BaseDept”类型，不能在此泛型集合中使用。
+参数名: value
+	Source : mscorlib
+	Help link : 
+	ParamName : value
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : Void ThrowWrongValueTypeArgumentException(System.Object, System.Type)
+	HResult : -2147024809
+	Stack Trace :    在 System.ThrowHelper.ThrowWrongValueTypeArgumentException(Object value, Type targetType)
+	   在 System.Collections.Generic.List`1.System.Collections.IList.Add(Object item)
+	   在 fastJSON.deserializer.RootList(Object parse, Type type)
+	   在 fastJSON.deserializer.ToObject(String json, Type type)
+	   在 fastJSON.deserializer.ToObject[T](String json)
+	   在 fastJSON.JSON.ToObject[T](String json)
+	   在 EFWCoreLib.WcfFrame.DataSerialize.ServiceResponseData.GetData[T](Int32 index)
+	   在 WinMainUIFrame.Winform.Controller.wcfclientEmpUserController.LoadDeptData()
+
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.exe
+
+ProcessId: 4680
+
+Process Name: D:\efwplus_cloudhospital\cloudhospital\Output_Client\efwplusClient.exe
+
+Thread Name: 
+
+Win32 ThreadId:5816
+
+Extended Properties: 
+----------------------------------------

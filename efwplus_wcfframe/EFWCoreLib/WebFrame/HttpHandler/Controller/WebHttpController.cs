@@ -42,15 +42,6 @@ namespace EFWCoreLib.WebFrame.HttpHandler.Controller
             return base.GetUserInfo();
         }
 
-        
-
-        //封装的页面子权限
-        //public DataTable GetPageRight(int MenuId)
-        //{
-        //    DataTable data = (DataTable)ExecuteFun.invoke(oleDb, "getPageRight", MenuId, LoginUserInfo.UserId);
-        //    return data;
-        //}
-
         private System.Collections.Generic.Dictionary<string, Object> _sessionData;
         /// <summary>
         /// Session数据传入后台

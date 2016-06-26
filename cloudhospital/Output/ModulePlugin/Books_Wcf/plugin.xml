@@ -12,12 +12,10 @@
     <namespace name="Books_Wcf.UnitTest.TestEntity"></namespace>
     <container>
       <!--真实环境-->
-      <!--<register type="IBookDao" mapTo="SqlBookDao"></register>-->
+      <register type="IBookDao" mapTo="SqlBookDao"></register>
       <!--测试环境-->
-      
-      <register type="IBookDao" mapTo="TestBookDao"></register>
-      <register type="Books" mapTo="unBooks"></register>
-      
+      <!--<register type="IBookDao" mapTo="TestBookDao"></register>
+      <register type="Books" mapTo="unBooks"></register>-->
     </container>
   </unity>
   <plugin name="Books.Service" version="1.0" title="Books服务" author="kakake" plugintype="Wcf" defaultdbkey="SQL2005" defaultcachekey="Cache Manager" isentry="1">

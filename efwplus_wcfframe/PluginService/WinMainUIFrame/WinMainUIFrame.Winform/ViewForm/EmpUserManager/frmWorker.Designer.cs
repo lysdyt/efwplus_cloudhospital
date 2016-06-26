@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorker));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGrid1 = new EfwControls.CustomControl.DataGrid();
@@ -62,37 +61,13 @@
             this.panelEx2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // BasepanelEx
-            // 
-            this.BasepanelEx.CanvasColor = System.Drawing.Color.Transparent;
-            this.BasepanelEx.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.BasepanelEx.Dock = System.Windows.Forms.DockStyle.None;
-            this.BasepanelEx.Location = new System.Drawing.Point(31, 129);
-            this.BasepanelEx.Padding = new System.Windows.Forms.Padding(5);
-            this.BasepanelEx.Size = new System.Drawing.Size(992, 660);
-            this.BasepanelEx.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.BasepanelEx.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.BasepanelEx.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.BasepanelEx.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.BasepanelEx.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.BasepanelEx.Style.BorderWidth = 0;
-            this.BasepanelEx.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.BasepanelEx.Style.GradientAngle = 90;
-            this.BasepanelEx.Visible = false;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.Images.SetKeyName(0, "openfolderHS.png");
-            this.imageList1.Images.SetKeyName(1, "field.png");
-            // 
             // dataGrid1
             // 
             this.dataGrid1.AllowSortWhenClickColumnHeader = false;
             this.dataGrid1.AllowUserToAddRows = false;
             this.dataGrid1.AllowUserToDeleteRows = false;
             this.dataGrid1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.dataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid1.BackgroundColor = System.Drawing.Color.White;
             this.dataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -111,7 +86,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.dataGrid1.HighlightSelectedColumnHeaders = false;
             this.dataGrid1.Location = new System.Drawing.Point(0, 27);
             this.dataGrid1.Name = "dataGrid1";
@@ -122,7 +97,7 @@
             this.dataGrid1.SelectAllSignVisible = false;
             this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrid1.SeqVisible = false;
-            this.dataGrid1.Size = new System.Drawing.Size(623, 529);
+            this.dataGrid1.Size = new System.Drawing.Size(629, 535);
             this.dataGrid1.TabIndex = 0;
             this.dataGrid1.CurrentCellChanged += new System.EventHandler(this.dataGrid1_CurrentCellChanged);
             // 
@@ -334,15 +309,14 @@
             // 
             // panelEx1
             // 
-            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.dataGrid1);
             this.panelEx1.Controls.Add(this.bar1);
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx1.Location = new System.Drawing.Point(5, 5);
+            this.panelEx1.Location = new System.Drawing.Point(2, 2);
             this.panelEx1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(623, 556);
+            this.panelEx1.Size = new System.Drawing.Size(629, 562);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -364,7 +338,7 @@
             this.buttonItem1});
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(623, 27);
+            this.bar1.Size = new System.Drawing.Size(629, 27);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 0;
@@ -394,9 +368,9 @@
             this.panelEx2.Controls.Add(this.labelX4);
             this.panelEx2.Controls.Add(this.textBoxX3);
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelEx2.Location = new System.Drawing.Point(638, 5);
+            this.panelEx2.Location = new System.Drawing.Point(641, 2);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(349, 556);
+            this.panelEx2.Size = new System.Drawing.Size(349, 562);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.Color = System.Drawing.Color.White;
             this.panelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -413,9 +387,9 @@
             this.panelEx3.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelEx3.Location = new System.Drawing.Point(628, 5);
+            this.panelEx3.Location = new System.Drawing.Point(631, 2);
             this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(10, 556);
+            this.panelEx3.Size = new System.Drawing.Size(10, 562);
             this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx3.Style.BackColor1.Color = System.Drawing.Color.White;
             this.panelEx3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -429,18 +403,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(992, 566);
             this.Controls.Add(this.panelEx1);
             this.Controls.Add(this.panelEx3);
             this.Controls.Add(this.panelEx2);
             this.Name = "frmWorker";
-            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "frmWorker";
             this.Load += new System.EventHandler(this.frmWorker_Load);
-            this.Controls.SetChildIndex(this.BasepanelEx, 0);
-            this.Controls.SetChildIndex(this.panelEx2, 0);
-            this.Controls.SetChildIndex(this.panelEx3, 0);
-            this.Controls.SetChildIndex(this.panelEx1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.panelEx1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();

@@ -18,9 +18,9 @@ namespace EfwControls.CustomControl
             InitializeComponent();
         }
 
-        public virtual void doBarCode(string barCode)
-        {
+        //public virtual void doBarCode(string barCode)
+        //{
 
-        }
+        //}
     }
 }

@@ -11,10 +11,11 @@ using EfwControls.CustomControl;
 using EFWCoreLib.WinformFrame.Controller;
 using WinMainUIFrame.Entity;
 using WinMainUIFrame.Winform.IView.RightManager;
+using EFWCoreLib.CoreFrame.Business;
 
 namespace WinMainUIFrame.Winform.ViewForm.RightManager
 {
-    public partial class frmGroupMenu : BaseFormEx, IfrmGroupMenu
+    public partial class frmGroupMenu : BaseFormBusiness, IfrmGroupMenu
     {
         public frmGroupMenu()
         {

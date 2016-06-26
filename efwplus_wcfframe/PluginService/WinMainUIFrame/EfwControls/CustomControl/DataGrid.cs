@@ -77,7 +77,7 @@ namespace EfwControls.CustomControl
         public DataGrid()
         {
             InitializeComponent();
-            this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.BackgroundColor = Color.White;
             this.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -88,7 +88,7 @@ namespace EfwControls.CustomControl
             this.HighlightSelectedColumnHeaders = false;
             this.SelectAllSignVisible = false;
             System.Windows.Forms.DataGridViewCellStyle cellstyle = new System.Windows.Forms.DataGridViewCellStyle();
-            cellstyle.BackColor = System.Drawing.Color.AliceBlue;
+            cellstyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.AlternatingRowsDefaultCellStyle = cellstyle;
         }
 

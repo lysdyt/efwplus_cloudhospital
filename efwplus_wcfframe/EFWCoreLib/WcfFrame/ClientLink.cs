@@ -27,6 +27,15 @@ namespace EFWCoreLib.WcfFrame
         /// 平台连接对象
         /// </summary>
         public CHDEPConnection mConn;
+        /// <summary>
+        /// 客户端是否忙
+        /// </summary>
+        public bool Isbusy {
+            get
+            {
+                return mChannelFactory.State == CommunicationState.Opened;
+            }
+        }
         private string AppRootPath = System.Windows.Forms.Application.StartupPath + "\\";
 
         private readonly string myNamespace = "http://www.efwplus.cn/";
@@ -934,7 +943,7 @@ namespace EFWCoreLib.WcfFrame
         /// </summary>
         private static Dictionary<string, ClientLink> ClientLinkDic = new Dictionary<string, ClientLink>();
         /// <summary>
-        /// 创建wcf服务连接
+        /// 创建wcf服务连接,此方式一个服务只有一个连接
         /// </summary>
         public static ClientLink CreateConnection(string pluginname)
         {
@@ -961,6 +970,11 @@ namespace EFWCoreLib.WcfFrame
             }
         }
 
+        public static ClientLink CreateConnection(string pluginname, string key)
+        {
+            return null;
+        }
+
         /// <summary>
         /// 卸载连接
         /// </summary>
@@ -984,5 +998,12 @@ namespace EFWCoreLib.WcfFrame
             }
             ClientLinkDic.Clear();
         }
+    }
+
+    public class ClientPool
+    {
+        public string key { get; set; }
+        public string pluginname { get; set; }
+        public ClientLink clientLink { get; set; }
     }
 }

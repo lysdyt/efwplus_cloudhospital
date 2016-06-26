@@ -35,10 +35,14 @@ namespace WinMainUIFrame.Winform.Controller
         [WinformMethod]
         public void NewMenu()
         {
-            ServiceResponseData retdata = InvokeWcfService("MainFrame.Service", "RightController", "NewMenu");
+            Action<ClientRequestData> requestAction = ((ClientRequestData request) =>
+            {
+                request.AddData(frmMenu.currentMenu.MenuId);
+                request.AddData(frmMenu.currentMenu.ModuleId);
+            });
+            ServiceResponseData retdata = InvokeWcfService("MainFrame.Service", "RightController", "NewMenu",requestAction);
             BaseMenu menu = retdata.GetData<BaseMenu>(0);
             frmMenu.currentMenu = menu;
-
         }
         [WinformMethod]
         public void SaveMenu()

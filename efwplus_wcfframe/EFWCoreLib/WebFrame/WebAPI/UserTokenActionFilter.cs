@@ -16,6 +16,7 @@ namespace EFWCoreLib.WebFrame.WebAPI
         private const string Key = "__user_token__";
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
+            /*
             if (EFWCoreLib.WcfFrame.ServerController.WcfServerManage.IsDebug == false)
             {
                 //登陆之外的请求验证token
@@ -48,7 +49,7 @@ namespace EFWCoreLib.WebFrame.WebAPI
 
                     actionContext.Request.Properties[Key] = loginInfo;
                 }
-            }
+            }*/
         }
     }
 }

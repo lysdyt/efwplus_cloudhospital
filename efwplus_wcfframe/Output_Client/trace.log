@@ -4101,3 +4101,257 @@ Win32 ThreadId:7156
 
 Extended Properties: 
 ----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 07:36:19
+
+Message: HandlingInstanceID: 5fedba6e-2e6b-44f0-88fb-2c6925bf1bde
+An exception of type 'System.Collections.Generic.KeyNotFoundException' occurred and was caught.
+-----------------------------------------------------------------------------------------------
+06/16/2016 15:36:19
+Type : System.Collections.Generic.KeyNotFoundException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 给定关键字不在字典中。
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : TValue get_Item(TKey)
+HResult : -2146232969
+Stack Trace :    在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 EFWCoreLib.CoreFrame.Init.AppPluginManage.GetPluginWinformControllerAttributeInfo(String pluginname, String name, ModulePlugin& mp) 位置 D:\efwplus_cloudhospital\efwplus_wcfframe\EFWCoreLib\CoreFrame\Init\AppPluginManage.cs:行号 126
+   在 EFWCoreLib.WinformFrame.Controller.ControllerHelper.CreateController(String controllername) 位置 D:\efwplus_cloudhospital\efwplus_wcfframe\EFWCoreLib\WinformFrame\Controller\ControllerHelper.cs:行号 25
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 07:36:19
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.vshost.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.vshost.exe
+
+ProcessId: 6868
+
+Process Name: D:\efwplus_cloudhospital\efwplus_wcfframe\Output_Client\efwplusClient.vshost.exe
+
+Thread Name: 
+
+Win32 ThreadId:7748
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 07:42:03
+
+Message: HandlingInstanceID: ec3078f4-98b9-44a9-92cf-c708e34bbdd7
+An exception of type 'System.Exception' occurred and was caught.
+----------------------------------------------------------------
+06/16/2016 15:42:03
+Type : System.Exception, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 控制器中没有此方法名
+Source : EFWCoreLib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Reflection.MethodInfo CreateMethodInfo(System.String, System.String)
+HResult : -2146233088
+Stack Trace :    在 EFWCoreLib.WinformFrame.Controller.ControllerHelper.CreateMethodInfo(String controllername, String methodname) 位置 D:\efwplus_cloudhospital\efwplus_wcfframe\EFWCoreLib\WinformFrame\Controller\ControllerHelper.cs:行号 80
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 07:42:03
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.vshost.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.vshost.exe
+
+ProcessId: 7644
+
+Process Name: D:\efwplus_cloudhospital\efwplus_wcfframe\Output_Client\efwplusClient.vshost.exe
+
+Thread Name: 
+
+Win32 ThreadId:1996
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 07:42:03
+
+Message: HandlingInstanceID: 1fe524eb-6fab-4c10-b8eb-eaea5d29760a
+An exception of type 'System.Exception' occurred and was caught.
+----------------------------------------------------------------
+06/16/2016 15:42:03
+Type : System.Exception, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 控制器中没有此方法名
+Source : EFWCoreLib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Reflection.MethodInfo CreateMethodInfo(System.String, System.String)
+HResult : -2146233088
+Stack Trace :    在 EFWCoreLib.WinformFrame.Controller.ControllerHelper.CreateMethodInfo(String controllername, String methodname) 位置 D:\efwplus_cloudhospital\efwplus_wcfframe\EFWCoreLib\WinformFrame\Controller\ControllerHelper.cs:行号 100
+   在 EFWCoreLib.WcfFrame.ClientController.WcfClientController.UI_ControllerEvent(String eventname, Object[] objs) 位置 D:\efwplus_cloudhospital\efwplus_wcfframe\EFWCoreLib\WcfFrame\ClientController\WcfClientController.cs:行号 84
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 07:42:03
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.vshost.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.vshost.exe
+
+ProcessId: 7644
+
+Process Name: D:\efwplus_cloudhospital\efwplus_wcfframe\Output_Client\efwplusClient.vshost.exe
+
+Thread Name: 
+
+Win32 ThreadId:1996
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 07:42:22
+
+Message: HandlingInstanceID: a8bcd6c0-4dba-4475-885d-41dca5b4ca50
+An exception of type 'System.Exception' occurred and was caught.
+----------------------------------------------------------------
+06/16/2016 15:42:22
+Type : System.Exception, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 控制器中没有此方法名
+Source : EFWCoreLib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Reflection.MethodInfo CreateMethodInfo(System.String, System.String)
+HResult : -2146233088
+Stack Trace :    在 EFWCoreLib.WinformFrame.Controller.ControllerHelper.CreateMethodInfo(String controllername, String methodname) 位置 D:\efwplus_cloudhospital\efwplus_wcfframe\EFWCoreLib\WinformFrame\Controller\ControllerHelper.cs:行号 80
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 07:42:22
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.vshost.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.vshost.exe
+
+ProcessId: 7644
+
+Process Name: D:\efwplus_cloudhospital\efwplus_wcfframe\Output_Client\efwplusClient.vshost.exe
+
+Thread Name: 
+
+Win32 ThreadId:1996
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/6/16 07:42:22
+
+Message: HandlingInstanceID: 825ed905-5ef2-4ac7-9860-ca69ca89ca6f
+An exception of type 'System.Exception' occurred and was caught.
+----------------------------------------------------------------
+06/16/2016 15:42:22
+Type : System.Exception, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 控制器中没有此方法名
+Source : EFWCoreLib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Reflection.MethodInfo CreateMethodInfo(System.String, System.String)
+HResult : -2146233088
+Stack Trace :    在 EFWCoreLib.WinformFrame.Controller.ControllerHelper.CreateMethodInfo(String controllername, String methodname) 位置 D:\efwplus_cloudhospital\efwplus_wcfframe\EFWCoreLib\WinformFrame\Controller\ControllerHelper.cs:行号 100
+   在 EFWCoreLib.WcfFrame.ClientController.WcfClientController.UI_ControllerEvent(String eventname, Object[] objs) 位置 D:\efwplus_cloudhospital\efwplus_wcfframe\EFWCoreLib\WcfFrame\ClientController\WcfClientController.cs:行号 84
+
+Additional Info:
+
+MachineName : MS-20160219JFVJ
+TimeStamp : 2016/6/16 07:42:22
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : efwplusClient.vshost.exe
+ThreadIdentity : 
+WindowsIdentity : MS-20160219JFVJ\Administrator
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: MS-20160219JFVJ
+
+App Domain: efwplusClient.vshost.exe
+
+ProcessId: 7644
+
+Process Name: D:\efwplus_cloudhospital\efwplus_wcfframe\Output_Client\efwplusClient.vshost.exe
+
+Thread Name: 
+
+Win32 ThreadId:1996
+
+Extended Properties: 
+----------------------------------------

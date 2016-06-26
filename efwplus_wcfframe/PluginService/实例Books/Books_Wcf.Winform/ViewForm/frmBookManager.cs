@@ -9,11 +9,12 @@ using System.Windows.Forms;
 using Books_Wcf.Winform.IView;
 using Books_Wcf.Entity;
 using EFWCoreLib.WinformFrame.Controller;
+using EFWCoreLib.CoreFrame.Business;
 
 namespace Books_Wcf.Winform.Viewform
 {
     //Wcf界面的代码和Winform界面的代码是一模一样的
-    public partial class frmBookManager : BaseForm, IfrmBookManager
+    public partial class frmBookManager : BaseFormBusiness, IfrmBookManager
     {
         public frmBookManager()
         {

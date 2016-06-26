@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -8,18 +8,18 @@ namespace EFWCoreLib.CoreFrame.Init
 {
     public delegate bool LoadingHandler();
 	/// <summary>
-	/// frmSplash µÄÕªÒªËµÃ÷¡£
+	/// frmSplash çš„æ‘˜è¦è¯´æ˜ã€‚
 	/// </summary>
     public class FrmSplash : Form, ILoading
     {
         private Timer timer1;
         private NotifyIcon notifyIcon1;
         private ContextMenuStrip contextMenuStrip1;
-        private ToolStripMenuItem Ö÷½çÃæToolStripMenuItem;
-        private ToolStripMenuItem ÇĞ»»ÓÃ»§ToolStripMenuItem;
-        private ToolStripMenuItem ÏûÏ¢Ãæ°åToolStripMenuItem;
+        private ToolStripMenuItem ä¸»ç•Œé¢ToolStripMenuItem;
+        private ToolStripMenuItem åˆ‡æ¢ç”¨æˆ·ToolStripMenuItem;
+        private ToolStripMenuItem æ¶ˆæ¯é¢æ¿ToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripMenuItem ÍË³öToolStripMenuItem;
+        private ToolStripMenuItem é€€å‡ºToolStripMenuItem;
         private PictureBox pictureBox1;
         private LinkLabel btnConfig;
         private LinkLabel btnclose;
@@ -29,12 +29,12 @@ namespace EFWCoreLib.CoreFrame.Init
         public FrmSplash()
         {
             //
-            // Windows ´°ÌåÉè¼ÆÆ÷Ö§³ÖËù±ØĞèµÄ
+            // Windows çª—ä½“è®¾è®¡å™¨æ”¯æŒæ‰€å¿…éœ€çš„
             //
             InitializeComponent();
 
             //
-            // TODO: ÔÚ InitializeComponent µ÷ÓÃºóÌí¼ÓÈÎºÎ¹¹Ôìº¯Êı´úÂë
+            // TODO: åœ¨ InitializeComponent è°ƒç”¨åæ·»åŠ ä»»ä½•æ„é€ å‡½æ•°ä»£ç 
             //
         }
 
@@ -46,7 +46,7 @@ namespace EFWCoreLib.CoreFrame.Init
         }
 
         /// <summary>
-        /// ÇåÀíËùÓĞÕıÔÚÊ¹ÓÃµÄ×ÊÔ´¡£
+        /// æ¸…ç†æ‰€æœ‰æ­£åœ¨ä½¿ç”¨çš„èµ„æºã€‚
         /// </summary>
         protected override void Dispose(bool disposing)
         {
@@ -60,10 +60,10 @@ namespace EFWCoreLib.CoreFrame.Init
             base.Dispose(disposing);
         }
 
-        #region Windows ´°ÌåÉè¼ÆÆ÷Éú³ÉµÄ´úÂë
+        #region Windows çª—ä½“è®¾è®¡å™¨ç”Ÿæˆçš„ä»£ç 
         /// <summary>
-        /// Éè¼ÆÆ÷Ö§³ÖËùĞèµÄ·½·¨ - ²»ÒªÊ¹ÓÃ´úÂë±à¼­Æ÷ĞŞ¸Ä
-        /// ´Ë·½·¨µÄÄÚÈİ¡£
+        /// è®¾è®¡å™¨æ”¯æŒæ‰€éœ€çš„æ–¹æ³• - ä¸è¦ä½¿ç”¨ä»£ç ç¼–è¾‘å™¨ä¿®æ”¹
+        /// æ­¤æ–¹æ³•çš„å†…å®¹ã€‚
         /// </summary>
         private void InitializeComponent()
         {
@@ -72,11 +72,11 @@ namespace EFWCoreLib.CoreFrame.Init
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Ö÷½çÃæToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ÇĞ»»ÓÃ»§ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ÏûÏ¢Ãæ°åToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ä¸»ç•Œé¢ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.åˆ‡æ¢ç”¨æˆ·ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.æ¶ˆæ¯é¢æ¿ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ÍË³öToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.é€€å‡ºToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConfig = new System.Windows.Forms.LinkLabel();
             this.btnclose = new System.Windows.Forms.LinkLabel();
@@ -97,46 +97,46 @@ namespace EFWCoreLib.CoreFrame.Init
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Ö÷½çÃæToolStripMenuItem,
-            this.ÇĞ»»ÓÃ»§ToolStripMenuItem,
-            this.ÏûÏ¢Ãæ°åToolStripMenuItem,
+            this.ä¸»ç•Œé¢ToolStripMenuItem,
+            this.åˆ‡æ¢ç”¨æˆ·ToolStripMenuItem,
+            this.æ¶ˆæ¯é¢æ¿ToolStripMenuItem,
             this.toolStripSeparator1,
-            this.ÍË³öToolStripMenuItem});
+            this.é€€å‡ºToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(125, 98);
             // 
-            // Ö÷½çÃæToolStripMenuItem
+            // ä¸»ç•Œé¢ToolStripMenuItem
             // 
-            this.Ö÷½çÃæToolStripMenuItem.Name = "Ö÷½çÃæToolStripMenuItem";
-            this.Ö÷½çÃæToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.Ö÷½çÃæToolStripMenuItem.Text = "Ö÷½çÃæ";
-            this.Ö÷½çÃæToolStripMenuItem.Click += new System.EventHandler(this.Ö÷½çÃæToolStripMenuItem_Click);
+            this.ä¸»ç•Œé¢ToolStripMenuItem.Name = "ä¸»ç•Œé¢ToolStripMenuItem";
+            this.ä¸»ç•Œé¢ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.ä¸»ç•Œé¢ToolStripMenuItem.Text = "ä¸»ç•Œé¢";
+            this.ä¸»ç•Œé¢ToolStripMenuItem.Click += new System.EventHandler(this.ä¸»ç•Œé¢ToolStripMenuItem_Click);
             // 
-            // ÇĞ»»ÓÃ»§ToolStripMenuItem
+            // åˆ‡æ¢ç”¨æˆ·ToolStripMenuItem
             // 
-            this.ÇĞ»»ÓÃ»§ToolStripMenuItem.Name = "ÇĞ»»ÓÃ»§ToolStripMenuItem";
-            this.ÇĞ»»ÓÃ»§ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.ÇĞ»»ÓÃ»§ToolStripMenuItem.Text = "ÇĞ»»ÓÃ»§";
-            this.ÇĞ»»ÓÃ»§ToolStripMenuItem.Visible = false;
+            this.åˆ‡æ¢ç”¨æˆ·ToolStripMenuItem.Name = "åˆ‡æ¢ç”¨æˆ·ToolStripMenuItem";
+            this.åˆ‡æ¢ç”¨æˆ·ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.åˆ‡æ¢ç”¨æˆ·ToolStripMenuItem.Text = "åˆ‡æ¢ç”¨æˆ·";
+            this.åˆ‡æ¢ç”¨æˆ·ToolStripMenuItem.Visible = false;
             // 
-            // ÏûÏ¢Ãæ°åToolStripMenuItem
+            // æ¶ˆæ¯é¢æ¿ToolStripMenuItem
             // 
-            this.ÏûÏ¢Ãæ°åToolStripMenuItem.Name = "ÏûÏ¢Ãæ°åToolStripMenuItem";
-            this.ÏûÏ¢Ãæ°åToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.ÏûÏ¢Ãæ°åToolStripMenuItem.Text = "ÏûÏ¢Ãæ°å";
-            this.ÏûÏ¢Ãæ°åToolStripMenuItem.Visible = false;
+            this.æ¶ˆæ¯é¢æ¿ToolStripMenuItem.Name = "æ¶ˆæ¯é¢æ¿ToolStripMenuItem";
+            this.æ¶ˆæ¯é¢æ¿ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.æ¶ˆæ¯é¢æ¿ToolStripMenuItem.Text = "æ¶ˆæ¯é¢æ¿";
+            this.æ¶ˆæ¯é¢æ¿ToolStripMenuItem.Visible = false;
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
             // 
-            // ÍË³öToolStripMenuItem
+            // é€€å‡ºToolStripMenuItem
             // 
-            this.ÍË³öToolStripMenuItem.Name = "ÍË³öToolStripMenuItem";
-            this.ÍË³öToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.ÍË³öToolStripMenuItem.Text = "ÍË³ö";
-            this.ÍË³öToolStripMenuItem.Click += new System.EventHandler(this.ÍË³öToolStripMenuItem_Click);
+            this.é€€å‡ºToolStripMenuItem.Name = "é€€å‡ºToolStripMenuItem";
+            this.é€€å‡ºToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.é€€å‡ºToolStripMenuItem.Text = "é€€å‡º";
+            this.é€€å‡ºToolStripMenuItem.Click += new System.EventHandler(this.é€€å‡ºToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -154,14 +154,14 @@ namespace EFWCoreLib.CoreFrame.Init
             this.btnConfig.AutoSize = true;
             this.btnConfig.BackColor = System.Drawing.Color.Gainsboro;
             this.btnConfig.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnConfig.Font = new System.Drawing.Font("¿¬Ìå", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnConfig.Font = new System.Drawing.Font("æ¥·ä½“", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnConfig.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.btnConfig.Location = new System.Drawing.Point(12, 138);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(106, 18);
             this.btnConfig.TabIndex = 2;
             this.btnConfig.TabStop = true;
-            this.btnConfig.Text = "ÉèÖÃÍ¨Ñ¶Á¬½Ó";
+            this.btnConfig.Text = "è®¾ç½®é€šè®¯è¿æ¥";
             this.btnConfig.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnConfig_LinkClicked);
             // 
             // btnclose
@@ -169,14 +169,14 @@ namespace EFWCoreLib.CoreFrame.Init
             this.btnclose.AutoSize = true;
             this.btnclose.BackColor = System.Drawing.Color.Gainsboro;
             this.btnclose.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnclose.Font = new System.Drawing.Font("¿¬Ìå", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnclose.Font = new System.Drawing.Font("æ¥·ä½“", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnclose.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.btnclose.Location = new System.Drawing.Point(277, 138);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(58, 18);
             this.btnclose.TabIndex = 3;
             this.btnclose.TabStop = true;
-            this.btnclose.Text = "¹Ø  ±Õ";
+            this.btnclose.Text = "å…³  é—­";
             this.btnclose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnclose_LinkClicked);
             // 
             // FrmSplash
@@ -213,7 +213,7 @@ namespace EFWCoreLib.CoreFrame.Init
             this.timer1.Enabled = true;
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.Icon = EFWCoreLib.Properties.Resources.msn;
-            this.notifyIcon1.Text = "EFW¿ò¼Ü¿Í»§¶Ë³ÌĞò";            
+            this.notifyIcon1.Text = "EFWæ¡†æ¶å®¢æˆ·ç«¯ç¨‹åº";            
         }
 
         private void FrmSplash_FormClosing(object sender, FormClosingEventArgs e)
@@ -230,7 +230,7 @@ namespace EFWCoreLib.CoreFrame.Init
                     this.Hide();
                 else
                 {
-                    //ÏÔÊ¾Á¬½ÓÊ§°Ü£¬ÅäÖÃÁ¬½Ó
+                    //æ˜¾ç¤ºè¿æ¥å¤±è´¥ï¼Œé…ç½®è¿æ¥
                     btnConfig.Visible = true;
                     btnclose.Visible = true;
                 }
@@ -243,18 +243,18 @@ namespace EFWCoreLib.CoreFrame.Init
                 MainForm.Show();
         }
 
-        private void Ö÷½çÃæToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ä¸»ç•Œé¢ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MainForm != null)
                 MainForm.Show();
         }
 
-        private void ÍË³öToolStripMenuItem_Click(object sender, EventArgs e)
+        private void é€€å‡ºToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        #region ILoading ³ÉÔ±
+        #region ILoading æˆå‘˜
 
         private Form _mainform;
         public Form MainForm

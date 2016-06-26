@@ -50,7 +50,7 @@
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx3.Location = new System.Drawing.Point(0, 0);
             this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(330, 28);
+            this.panelEx3.Size = new System.Drawing.Size(607, 28);
             this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -70,6 +70,7 @@
             this.comboBoxEx1.DisplayMember = "Text";
             this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxEx1.FormattingEnabled = true;
             this.comboBoxEx1.ItemHeight = 15;
             this.comboBoxEx1.Items.AddRange(new object[] {
@@ -107,16 +108,16 @@
             // 
             // slider1
             // 
-            this.slider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.slider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
-            this.slider1.BackgroundStyle.Class = "";
+            this.slider1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.slider1.LabelVisible = false;
             this.slider1.Location = new System.Drawing.Point(63, 3);
             this.slider1.Name = "slider1";
-            this.slider1.Size = new System.Drawing.Size(98, 23);
+            this.slider1.Size = new System.Drawing.Size(375, 23);
             this.slider1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.slider1.TabIndex = 3;
             this.slider1.Value = 0;
@@ -128,8 +129,8 @@
             // 
             // 
             // 
-            this.labelX1.BackgroundStyle.Class = "";
-            this.labelX1.Location = new System.Drawing.Point(167, 4);
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(444, 4);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(158, 23);
@@ -142,7 +143,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelEx3);
             this.Name = "Pager";
-            this.Size = new System.Drawing.Size(330, 28);
+            this.Size = new System.Drawing.Size(607, 28);
             this.panelEx3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -151,14 +152,13 @@
         #endregion
 
         private DevComponents.DotNetBar.PanelEx panelEx3;
-        public DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
         private DevComponents.Editors.ComboItem comboItem1;
         private DevComponents.Editors.ComboItem comboItem2;
         private DevComponents.Editors.ComboItem comboItem3;
         private DevComponents.Editors.ComboItem comboItem4;
         private DevComponents.Editors.ComboItem comboItem5;
-        public DevComponents.DotNetBar.Controls.Slider slider1;
         private DevComponents.DotNetBar.LabelX labelX1;
-
+        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
+        private DevComponents.DotNetBar.Controls.Slider slider1;
     }
 }

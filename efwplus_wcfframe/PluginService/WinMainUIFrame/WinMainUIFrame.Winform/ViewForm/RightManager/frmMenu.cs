@@ -51,7 +51,7 @@ namespace WinMainUIFrame.Winform.ViewForm.RightManager
                     TreeNode _node = new TreeNode();
                     _node.Text = val.Name;
                     _node.Tag = val;
-                    _node.ForeColor = Color.Blue;
+                    //_node.ForeColor = Color.Black;
                     node.Nodes.Add(_node);
                     recursionMenu(menuList, val.MenuId, _node);
                 }
@@ -68,7 +68,7 @@ namespace WinMainUIFrame.Winform.ViewForm.RightManager
                 TreeNode _node = new TreeNode();
                 _node.Text = val.Name;
                 _node.Tag = val;
-                _node.ForeColor = Color.Blue;
+                //_node.ForeColor = Color.Blue;
                 pNode.Nodes.Add(_node);
                 recursionMenu(allmenu, val.MenuId, _node);
             }

@@ -12,9 +12,9 @@ EndProject
 Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "efwplusServer", "Output\efwplusServer.exe", "{BA4AC09D-9707-4158-A437-9783C818B13A}"
 	ProjectSection(DebuggerProjectSystem) = preProject
 		PortSupplier = 00000000-0000-0000-0000-000000000000
-		Executable = D:\工作台\efwplus产品目录\efwplus_cloudhospital\cloudhospital\Output\efwplusServer.exe
+		Executable = D:\efwplus_cloudhospital\cloudhospital\Output\efwplusServer.exe
 		RemoteMachine = UALG394S3SBEXSU
-		StartingDirectory = D:\工作台\efwplus产品目录\efwplus_cloudhospital\cloudhospital\Output
+		StartingDirectory = D:\efwplus_cloudhospital\cloudhospital\Output
 		Environment = 默认值
 		LaunchingEngine = 00000000-0000-0000-0000-000000000000
 		UseLegacyDebugEngines = No

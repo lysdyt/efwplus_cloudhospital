@@ -21,7 +21,9 @@ using EFWCoreLib.WcfFrame.DataSerialize;
 
 namespace EFWCoreLib.WebFrame.WebAPI
 {
-
+    /// <summary>
+    /// WebApi基类控制器
+    /// </summary>
     public class WebApiController : ApiController, INewObject, INewDao
     {
         private AbstractDatabase _oleDb = null;

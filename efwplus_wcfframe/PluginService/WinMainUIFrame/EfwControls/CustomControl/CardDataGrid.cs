@@ -226,7 +226,7 @@ namespace EfwControls.CustomControl
         /// <returns></returns>
         public bool GetIsFocused()
         {
-            if (this.textdataGrid.Focused == true || this.textpager.comboBoxEx1.Focused == true || this.textpager.slider1.Focused == true)
+            if (this.textdataGrid.Focused == true)// || this.textpager.comboBoxEx1.Focused == true || this.textpager.slider1.Focused == true)
             {
                 return true;
             }

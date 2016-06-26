@@ -11,10 +11,11 @@ using EfwControls.CustomControl;
 using EFWCoreLib.WinformFrame.Controller;
 using WinMainUIFrame.Entity;
 using WinMainUIFrame.Winform.IView.EmpUserManager;
+using EFWCoreLib.CoreFrame.Business;
 
 namespace WinMainUIFrame.Winform.ViewForm.EmpUserManager
 {
-    public partial class frmWorker : BaseFormEx, IfrmWorker
+    public partial class frmWorker : BaseFormBusiness, IfrmWorker
     {
         public frmWorker()
         {

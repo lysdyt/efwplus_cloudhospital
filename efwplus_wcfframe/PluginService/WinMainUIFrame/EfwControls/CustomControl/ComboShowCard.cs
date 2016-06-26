@@ -335,7 +335,7 @@ namespace EfwControls.CustomControl
         //2.离开焦点隐藏ShowCard
         protected override void OnLeave(EventArgs e)
         {
-            if (this.textdataGrid.Focused == true || this.textpager.comboBoxEx1.Focused == true || this.textpager.slider1.Focused == true)
+            if (this.textdataGrid.Focused == true )//|| this.textpager.comboBoxEx1.Focused == true || this.textpager.slider1.Focused == true)
             {
                 this.Focus();
                 return;
