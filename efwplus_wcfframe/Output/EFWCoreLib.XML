@@ -3087,6 +3087,255 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:EFWCoreLib.WcfFrame.ClientLinkPoolCache">
+            <summary>
+            连接池缓存
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPoolCache.poolDic">
+            <summary>
+            Wcf连接池
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPoolCache.thDic">
+            <summary>
+            监控线程
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPoolCache.Init(System.Boolean,System.Int32,System.Int64,System.Int64,System.String,System.Int32)">
+            <summary>
+            初始化连接池
+            </summary>
+            <param name="isUseWcfPool">是否使用连接池</param>
+            <param name="wcfMaxPoolSize">池子最大值</param>
+            <param name="wcfOutTime">获取连接超时时间</param>
+            <param name="WcfFailureTime">连接池回收时间</param>
+            <param name="server_name">服务器名</param>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPoolCache.GetClientPool(System.String)">
+            <summary>
+            获取连接池
+            </summary>
+            <param name="server_name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EFWCoreLib.WcfFrame.ClientLinkManage">
+            <summary>
+            客户端程序连接管理类
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkManage.IsMessage">
+            <summary>
+            是否开启业务消息
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkManage.MessageTime">
+            <summary>
+            业务消息触发时间间隔，单位秒
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkManage.Token">
+            <summary>
+            登陆后缓存令牌
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkManage.ClientLinkDic">
+            <summary>
+            缓存的客户连接
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkManage.CreateConnection(System.String)">
+            <summary>
+            创建wcf服务连接,此方式一个服务只有一个连接
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkManage.UnConnection(System.String)">
+            <summary>
+            卸载连接
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkManage.UnAllConnection">
+            <summary>
+            关闭所有连接
+            </summary>
+        </member>
+        <member name="T:EFWCoreLib.WcfFrame.ClientLinkPool">
+            <summary>
+            连接池
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPool.poollist">
+            <summary>
+            通讯实体列表
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.#ctor(System.Int32,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="WcfMaxPoolSize">wcf池子最大数</param>
+            <param name="WcfTimeOut">wcf获取连接超时时间，以秒为单位</param>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPool.wcfMaxPoolSize">
+            <summary>
+            Wcf连接池最大值，默认为100
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPool.wcfOutTime">
+            <summary>
+            Wcf获取连接过期时间(默认一分钟)
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPool.wcfFailureTime">
+            <summary>
+            Wcf连接失效时间(默认一分钟)
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPool.monitorTimeSpan">
+            <summary>
+            监控时间间隔（单位：秒）
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.MonitorExec">
+            <summary>
+            监控逻辑
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.ClearPool">
+            <summary>
+            清空连接池
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.GetUsedPoolNums(System.String)">
+            <summary>
+            当前正在使用的池子数量
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.GetFreePoolNums(System.String)">
+            <summary>
+            当前空闲池子数量
+            </summary>
+            <param name="pluginname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.GetFreePoolNumsNotCurrent(System.String)">
+            <summary>
+            判断非当前契约是否有空闲池子
+            </summary>
+            <param name="pluginname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.GetCountPoolNums(System.String)">
+            <summary>
+            获取池子总数
+            </summary>
+            <param name="pluginname"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ClientLinkPool.CurrentPoolNums">
+            <summary>
+            当前池子连接总数
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ClientLinkPool.IsPoolFull">
+            <summary>
+            判断池子是否满了
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPool.index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPool.usedNumsDic">
+            <summary>
+            已经使用的数量
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLinkPool.countNumsDic">
+            <summary>
+            池子里个类型连接总数
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.ReapPool">
+            <summary>
+            处理连接池
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.AddPool(System.String,EFWCoreLib.WcfFrame.ClientLink@,System.Nullable{System.Int32}@)">
+            <summary>
+            加入连接池
+            </summary>
+            <param name="clientlink">连接</param>
+            <param name="Index">返回的连接池索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.GetClientLink(System.String)">
+            <summary>
+            从连接池中获取一个连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.ReturnPool(System.String,System.Int32)">
+            <summary>
+            把连接放回池子
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.RemovePoolAt(System.String,System.Int32)">
+            <summary>
+            移除索引的连接
+            </summary>
+            <param name="pluginname">插件名称</param>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLinkPool.RemovePoolOneNotAt(System.String,EFWCoreLib.WcfFrame.ClientLink@,System.Nullable{System.Int32}@)">
+            <summary>
+            踢掉一个非当前契约的空闲连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EFWCoreLib.WcfFrame.CHDEPConnection">
+            <summary>
+            平台连接对象
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.WcfService">
+            <summary>
+            业务数据服务
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.ClientService">
+            <summary>
+            客户端回调服务
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.ClientID">
+            <summary>
+            客户端ID，服务端生成
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.ClientName">
+            <summary>
+            客户端名称
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.RouterID">
+            <summary>
+            路由ID
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.PluginName">
+            <summary>
+            服务插件名称
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.Token">
+            <summary>
+            客户端令牌
+            </summary>
+        </member>
         <member name="T:EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData">
             <summary>
             客户端请求数据
@@ -3159,6 +3408,38 @@
             设置输出的Json数据
             </summary>
             <param name="retData"></param>
+        </member>
+        <member name="T:EFWCoreLib.WcfFrame.ReplyClientCallBack">
+            <summary>
+            客户端回调对象
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ReplyClientCallBack.ReplyClientAction">
+            <summary>
+            回调委托
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ReplyClientCallBack.SuperReplyClientAction">
+            <summary>
+            超级回调委托
+            </summary>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ReplyClientCallBack.ReplyClient(System.String)">
+            <summary>
+            回调客户端
+            </summary>
+            <param name="jsondata"></param>
+        </member>
+        <member name="M:EFWCoreLib.WcfFrame.ReplyClientCallBack.SuperReplyClient(EFWCoreLib.WcfFrame.SDMessageHeader.HeaderParameter,System.String,System.String,System.String,System.String)">
+            <summary>
+            超级回调中间件
+            </summary>
+            <param name="para"></param>
+            <param name="plugin"></param>
+            <param name="controller"></param>
+            <param name="method"></param>
+            <param name="jsondata"></param>
+            <returns></returns>
         </member>
         <member name="T:EFWCoreLib.WcfFrame.SDMessageHeader.HeaderParameter">
             <summary>
@@ -3681,9 +3962,19 @@
             客户端连接对象，一个对象一个会话通道
             </summary>
         </member>
-        <member name="F:EFWCoreLib.WcfFrame.ClientLink.mConn">
+        <member name="P:EFWCoreLib.WcfFrame.ClientLink.PluginName">
+            <summary>
+            服务插件名称
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ClientLink.mConn">
             <summary>
             平台连接对象
+            </summary>
+        </member>
+        <member name="F:EFWCoreLib.WcfFrame.ClientLink.AppRootPath">
+            <summary>
+            客户端是否忙
             </summary>
         </member>
         <member name="M:EFWCoreLib.WcfFrame.ClientLink.#ctor(System.String)">
@@ -3707,6 +3998,13 @@
             <param name="pluginname">插件名称</param>
             <param name="actionConfig">获取消息配置</param>
         </member>
+        <member name="M:EFWCoreLib.WcfFrame.ClientLink.#ctor(System.String,System.Action)">
+            <summary>
+            初始化通讯连接
+            </summary>
+            <param name="clientname">客户端名称</param>
+            <param name="_createconnAction">创建连接回调</param>
+        </member>
         <member name="M:EFWCoreLib.WcfFrame.ClientLink.Finalize">
             <summary>
             释放连接
@@ -3715,6 +4013,31 @@
         <member name="M:EFWCoreLib.WcfFrame.ClientLink.Dispose">
             <summary>
             释放连接
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ClientLink.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ClientLink.IsUsed">
+            <summary>
+            是否在使用
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ClientLink.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ClientLink.LastUsedTime">
+            <summary>
+            最后使用时间
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.ClientLink.UsedNums">
+            <summary>
+            使用次数
             </summary>
         </member>
         <member name="M:EFWCoreLib.WcfFrame.ClientLink.CreateConnection">
@@ -3800,118 +4123,6 @@
             </summary>
             <param name="ServerIdentify"></param>
             <param name="plugin"></param>
-        </member>
-        <member name="T:EFWCoreLib.WcfFrame.CHDEPConnection">
-            <summary>
-            平台连接对象
-            </summary>
-        </member>
-        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.WcfService">
-            <summary>
-            业务数据服务
-            </summary>
-        </member>
-        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.ClientService">
-            <summary>
-            客户端回调服务
-            </summary>
-        </member>
-        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.ClientID">
-            <summary>
-            客户端ID，服务端生成
-            </summary>
-        </member>
-        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.ClientName">
-            <summary>
-            客户端名称
-            </summary>
-        </member>
-        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.RouterID">
-            <summary>
-            路由ID
-            </summary>
-        </member>
-        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.PluginName">
-            <summary>
-            服务插件名称
-            </summary>
-        </member>
-        <member name="P:EFWCoreLib.WcfFrame.CHDEPConnection.Token">
-            <summary>
-            客户端令牌
-            </summary>
-        </member>
-        <member name="T:EFWCoreLib.WcfFrame.ReplyClientCallBack">
-            <summary>
-            客户端回调对象
-            </summary>
-        </member>
-        <member name="P:EFWCoreLib.WcfFrame.ReplyClientCallBack.ReplyClientAction">
-            <summary>
-            回调委托
-            </summary>
-        </member>
-        <member name="P:EFWCoreLib.WcfFrame.ReplyClientCallBack.SuperReplyClientAction">
-            <summary>
-            超级回调委托
-            </summary>
-        </member>
-        <member name="M:EFWCoreLib.WcfFrame.ReplyClientCallBack.ReplyClient(System.String)">
-            <summary>
-            回调客户端
-            </summary>
-            <param name="jsondata"></param>
-        </member>
-        <member name="M:EFWCoreLib.WcfFrame.ReplyClientCallBack.SuperReplyClient(EFWCoreLib.WcfFrame.SDMessageHeader.HeaderParameter,System.String,System.String,System.String,System.String)">
-            <summary>
-            超级回调中间件
-            </summary>
-            <param name="para"></param>
-            <param name="plugin"></param>
-            <param name="controller"></param>
-            <param name="method"></param>
-            <param name="jsondata"></param>
-            <returns></returns>
-        </member>
-        <member name="T:EFWCoreLib.WcfFrame.ClientLinkManage">
-            <summary>
-            客户端管理类
-            </summary>
-        </member>
-        <member name="F:EFWCoreLib.WcfFrame.ClientLinkManage.IsMessage">
-            <summary>
-            是否开启业务消息
-            </summary>
-        </member>
-        <member name="F:EFWCoreLib.WcfFrame.ClientLinkManage.MessageTime">
-            <summary>
-            业务消息触发时间间隔，单位秒
-            </summary>
-        </member>
-        <member name="F:EFWCoreLib.WcfFrame.ClientLinkManage.Token">
-            <summary>
-            登陆后缓存令牌
-            </summary>
-        </member>
-        <member name="F:EFWCoreLib.WcfFrame.ClientLinkManage.ClientLinkDic">
-            <summary>
-            缓存的客户连接
-            </summary>
-        </member>
-        <member name="M:EFWCoreLib.WcfFrame.ClientLinkManage.CreateConnection(System.String)">
-            <summary>
-            创建wcf服务连接
-            </summary>
-        </member>
-        <member name="M:EFWCoreLib.WcfFrame.ClientLinkManage.UnConnection(System.String)">
-            <summary>
-            卸载连接
-            </summary>
-        </member>
-        <member name="M:EFWCoreLib.WcfFrame.ClientLinkManage.UnAllConnection">
-            <summary>
-            关闭所有连接
-            </summary>
         </member>
         <member name="T:EFWCoreLib.WebFrame.HttpHandler.WebResponseData">
             <summary>
@@ -4024,36 +4235,6 @@
             <summary>
             Form提交的数据
             </summary>
-        </member>
-        <member name="M:EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfService(System.String,System.String,System.String)">
-            <summary>
-            调用wcf服务
-            </summary>
-            <param name="wcfpluginname">插件名称</param>
-            <param name="wcfcontroller">控制器名称</param>
-            <param name="wcfmethod">方法名称</param>
-            <returns></returns>
-        </member>
-        <member name="M:EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfService(System.String,System.String,System.String,System.Action{EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData})">
-            <summary>
-            调用wcf服务
-            </summary>
-            <param name="wcfpluginname"></param>
-            <param name="wcfcontroller"></param>
-            <param name="wcfmethod"></param>
-            <param name="requestAction"></param>
-            <returns></returns>
-        </member>
-        <member name="M:EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfServiceAsync(System.String,System.String,System.String,System.Action{EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData},System.Action{EFWCoreLib.WcfFrame.DataSerialize.ServiceResponseData})">
-            <summary>
-            异步调用wcf服务
-            </summary>
-            <param name="wcfpluginname"></param>
-            <param name="wcfcontroller"></param>
-            <param name="wcfmethod"></param>
-            <param name="requestAction"></param>
-            <param name="responseAction"></param>
-            <returns></returns>
         </member>
         <member name="T:EFWCoreLib.WebFrame.HttpHandler.HttpHandlerInvoker">
             <summary>
@@ -4337,10 +4518,15 @@
             /efwplusApi/coresys/service/
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:EFWCoreLib.WebFrame.WebAPI.ServiceController.Get(EFWCoreLib.WebFrame.WebAPI.ServiceParam)" -->
         <member name="M:EFWCoreLib.WebFrame.WebAPI.ServiceController.Post(EFWCoreLib.WebFrame.WebAPI.ServiceParam)">
             efwplusApi/coresys/service/post?token=111111
             {"wcfpluginname":"Books.Service","wcfcontroller":"bookWcfController","wcfmethod":"GetBooks","jsondata":"[]"}
+        </member>
+        <member name="T:EFWCoreLib.WebFrame.WebAPI.WcfPerformanceController">
+            <summary>
+            通过WebAPI测试中间件性能
+            /efwplusApi/coresys/wcfperformance/request
+            </summary>
         </member>
         <member name="T:EFWCoreLib.WebFrame.WebAPI.PluginHttpControllerSelector">
             <summary>

@@ -16,8 +16,8 @@ namespace EFWCoreLib.WebFrame.WebAPI
         private const string Key = "__user_token__";
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
-            /*
-            if (EFWCoreLib.WcfFrame.ServerController.WcfServerManage.IsDebug == false)
+             
+            if (EFWCoreLib.WcfFrame.ServerController.WcfServerManage.IsToken == true)
             {
                 //登陆之外的请求验证token
                 if (actionContext.Request.RequestUri.AbsolutePath.ToLower().IndexOf("/efwplusApi/coresys/login/userlogin".ToLower()) == -1)
@@ -49,7 +49,7 @@ namespace EFWCoreLib.WebFrame.WebAPI
 
                     actionContext.Request.Properties[Key] = loginInfo;
                 }
-            }*/
+            } 
         }
     }
 }

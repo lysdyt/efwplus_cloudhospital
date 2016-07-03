@@ -2,9 +2,9 @@
 <root>
   <hostname value="开发调试中间件">
   </hostname>
-  <cdkey value="gJIZlFfCJCiRTZGUJKDRkcw/F5FivPCQ3pHf/iAoWdI0PPUkQvcrSeS2amoURCIV">
+  <cdkey value="9OEf6xFSO/HQIFDITUfMI7pmVqkVaWfIc6luyXbdmjMsVOCxkwjo4nyCMH/jxwp5">
   </cdkey>
-  <debug value="1">
+  <debug value="0">
   </debug>
   <wcfservice value="1">
   </wcfservice>
@@ -14,7 +14,7 @@
   </filetransfer>
   <webapi value="1">
   </webapi>
-  <heartbeat value="1">
+  <heartbeat value="0">
   </heartbeat>
   <heartbeattime value="2">
   </heartbeattime>

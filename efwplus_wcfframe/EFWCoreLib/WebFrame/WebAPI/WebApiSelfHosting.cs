@@ -8,6 +8,7 @@ using System.Web.Http;
 using System.Web.Http.Dispatcher;
 using System.Web.Http.SelfHost;
 using EFWCoreLib.WcfFrame.ServerController;
+using EFWCoreLib.WcfFrame;
 
 namespace EFWCoreLib.WebFrame.WebAPI
 {
@@ -25,6 +26,10 @@ namespace EFWCoreLib.WebFrame.WebAPI
                 WebApiUri = _WebApiUri;
             else
                 WebApiUri = "http://localhost:8088";
+
+            //初始化连接池
+            ClientLinkPoolCache.Init(true, 500, 30, 600, "webapi", 30);
+
             hostwcfMsg(Color.Blue, DateTime.Now, "WebAPI服务初始化完成");
         }
 

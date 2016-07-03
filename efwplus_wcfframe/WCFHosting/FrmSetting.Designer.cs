@@ -49,6 +49,8 @@
             this.ckovertime = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbSerializeType = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.ckWebapi = new System.Windows.Forms.CheckBox();
             this.ckfile = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -71,8 +73,7 @@
             this.txtwcfurl = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cbSerializeType = new System.Windows.Forms.ComboBox();
+            this.cktoken = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -284,6 +285,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cktoken);
             this.tabPage1.Controls.Add(this.cbSerializeType);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.ckWebapi);
@@ -311,6 +313,29 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "基本参数";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cbSerializeType
+            // 
+            this.cbSerializeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSerializeType.FormattingEnabled = true;
+            this.cbSerializeType.Items.AddRange(new object[] {
+            "Newtonsoft",
+            "protobuf",
+            "fastJSON"});
+            this.cbSerializeType.Location = new System.Drawing.Point(238, 254);
+            this.cbSerializeType.Name = "cbSerializeType";
+            this.cbSerializeType.Size = new System.Drawing.Size(133, 20);
+            this.cbSerializeType.TabIndex = 21;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(84, 254);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(92, 17);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "数据序列化策略";
             // 
             // ckWebapi
             // 
@@ -541,28 +566,16 @@
             this.panel1.Size = new System.Drawing.Size(430, 61);
             this.panel1.TabIndex = 19;
             // 
-            // label13
+            // cktoken
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(84, 254);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 17);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "数据序列化策略";
-            // 
-            // cbSerializeType
-            // 
-            this.cbSerializeType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSerializeType.FormattingEnabled = true;
-            this.cbSerializeType.Items.AddRange(new object[] {
-            "Newtonsoft",
-            "protobuf",
-            "fastJSON"});
-            this.cbSerializeType.Location = new System.Drawing.Point(238, 254);
-            this.cbSerializeType.Name = "cbSerializeType";
-            this.cbSerializeType.Size = new System.Drawing.Size(133, 20);
-            this.cbSerializeType.TabIndex = 21;
+            this.cktoken.AutoSize = true;
+            this.cktoken.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cktoken.Location = new System.Drawing.Point(238, 227);
+            this.cktoken.Name = "cktoken";
+            this.cktoken.Size = new System.Drawing.Size(99, 21);
+            this.cktoken.TabIndex = 22;
+            this.cktoken.Text = "开启身份验证";
+            this.cktoken.UseVisualStyleBackColor = true;
             // 
             // FrmSetting
             // 
@@ -640,5 +653,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbSerializeType;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox cktoken;
     }
 }

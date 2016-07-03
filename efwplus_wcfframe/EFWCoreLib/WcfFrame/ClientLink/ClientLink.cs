@@ -15,6 +15,7 @@ using EFWCoreLib.CoreFrame.Common;
 using EFWCoreLib.WcfFrame.ServerController;
 using EFWCoreLib.WcfFrame.SDMessageHeader;
 using EFWCoreLib.WcfFrame.DataSerialize;
+using System.Threading;
 
 namespace EFWCoreLib.WcfFrame
 {
@@ -24,20 +25,18 @@ namespace EFWCoreLib.WcfFrame
     public class ClientLink : IDisposable
     {
         /// <summary>
+        /// 服务插件名称
+        /// </summary>
+        public string PluginName { get; set; }
+        /// <summary>
         /// 平台连接对象
         /// </summary>
-        public CHDEPConnection mConn;
+        public CHDEPConnection mConn { get; set; }
         /// <summary>
         /// 客户端是否忙
         /// </summary>
-        public bool Isbusy {
-            get
-            {
-                return mChannelFactory.State == CommunicationState.Opened;
-            }
-        }
+        
         private string AppRootPath = System.Windows.Forms.Application.StartupPath + "\\";
-
         private readonly string myNamespace = "http://www.efwplus.cn/";
         private DuplexChannelFactory<IWCFHandlerService> mChannelFactory;
         private ChannelFactory<IFileTransfer> mfileChannelFactory = null;
@@ -72,7 +71,11 @@ namespace EFWCoreLib.WcfFrame
             InitComm(clientname, pluginname);
         }
 
-
+        /// <summary>
+        /// 初始化通讯连接
+        /// </summary>
+        /// <param name="clientname">客户端名称</param>
+        /// <param name="_createconnAction">创建连接回调</param>
         public ClientLink(string clientname, Action _createconnAction)
         {
             createconnAction = _createconnAction;
@@ -86,6 +89,8 @@ namespace EFWCoreLib.WcfFrame
                 clientname = getLocalIPAddress();
             if (string.IsNullOrEmpty(pluginname))
                 pluginname = "SuperPlugin";
+
+            PluginName = pluginname;
 
             mConn = new CHDEPConnection();
             mConn.ClientName = clientname;
@@ -130,6 +135,61 @@ namespace EFWCoreLib.WcfFrame
             }
         }
 
+        #endregion
+
+        #region 连接池属性
+        private int index;
+        /// <summary>
+        /// 索引
+        /// </summary>
+        public int Index
+        {
+            get { return index; }
+            set { index = value; }
+        }
+        bool isUsed = false;
+        /// <summary>
+        /// 是否在使用
+        /// </summary>
+        public bool IsUsed
+        {
+            get { return isUsed; }
+            set { isUsed = value; }
+        }
+
+        DateTime createdTime;
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CreatedTime
+        {
+            get { return createdTime; }
+            set { createdTime = value; }
+        }
+
+        DateTime lastUsedTime;
+        /// <summary>
+        /// 最后使用时间
+        /// </summary>
+        public DateTime LastUsedTime
+        {
+            get { return lastUsedTime; }
+            set { lastUsedTime = value; }
+        }
+
+        int usedNums;
+        /// <summary>
+        /// 使用次数
+        /// </summary>
+        public int UsedNums
+        {
+            get { return usedNums; }
+            set { usedNums = value; }
+        }
+
+        public CommunicationState State {
+            get { return mChannelFactory.State; }
+        }
         #endregion
 
         #region 数据交互
@@ -804,206 +864,6 @@ namespace EFWCoreLib.WcfFrame
         }
         #endregion
     }
-    /// <summary>
-    /// 平台连接对象
-    /// </summary>
-    public class CHDEPConnection
-    {
-        /// <summary>
-        /// 业务数据服务
-        /// </summary>
-        public IWCFHandlerService WcfService { get; set; }
-        /// <summary>
-        /// 客户端回调服务
-        /// </summary>
-        public IClientService ClientService { get; set; }
-        /// <summary>
-        /// 客户端ID，服务端生成
-        /// </summary>
-        public string ClientID { get; set; }//服务端返回
-        /// <summary>
-        /// 客户端名称
-        /// </summary>
-        public string ClientName { get; set; }
-        /// <summary>
-        /// 路由ID
-        /// </summary>
-        public string RouterID { get; set; }
-        /// <summary>
-        /// 服务插件名称
-        /// </summary>
-        public string PluginName { get; set; }
-        /// <summary>
-        /// 客户端令牌
-        /// </summary>
-        public string Token { get; set; }
-    }
+    
 
-    /// <summary>
-    /// 客户端回调对象
-    /// </summary>
-    [CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, UseSynchronizationContext = false)]
-    public class ReplyClientCallBack : IClientService
-    {
-        /// <summary>
-        /// 回调委托
-        /// </summary>
-        public Action<string> ReplyClientAction
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// 超级回调委托
-        /// </summary>
-        public Func<HeaderParameter, string, string, string, string, string> SuperReplyClientAction
-        {
-            get;
-            set;
-        }
-
-        #region IClientService 成员
-        /// <summary>
-        /// 回调客户端
-        /// </summary>
-        /// <param name="jsondata"></param>
-        public void ReplyClient(string jsondata)
-        {
-            if (ReplyClientAction != null)
-            {
-                ReplyClientAction(jsondata);
-            }
-        }
-        /// <summary>
-        /// 超级回调中间件
-        /// </summary>
-        /// <param name="para"></param>
-        /// <param name="plugin"></param>
-        /// <param name="controller"></param>
-        /// <param name="method"></param>
-        /// <param name="jsondata"></param>
-        /// <returns></returns>
-        public string SuperReplyClient(HeaderParameter para, string plugin, string controller, string method, string jsondata)
-        {
-            if (SuperReplyClientAction != null)
-            {
-                return SuperReplyClientAction(para, plugin, controller, method, jsondata);
-            }
-            return null;
-        }
-
-        #endregion
-
-        #region 分布式缓存同步
-
-
-        public ServerController.CacheIdentify DistributedCacheSyncIdentify(ServerController.CacheIdentify cacheId)
-        {
-            return EFWCoreLib.WcfFrame.ServerController.DistributedCacheManage.CompareCache(cacheId);
-        }
-
-        public void DistributedCacheSync(ServerController.CacheObject cache)
-        {
-            EFWCoreLib.WcfFrame.ServerController.DistributedCacheManage.SyncLocalCache(cache);
-        }
-
-
-        public void DistributedAllCacheSync(List<ServerController.CacheObject> cachelist)
-        {
-            foreach (var cache in cachelist)
-            {
-                EFWCoreLib.WcfFrame.ServerController.DistributedCacheManage.SyncLocalCache(cache);
-            }
-        }
-
-        #endregion
-    }
-
-    /// <summary>
-    /// 客户端管理类
-    /// </summary>
-    public class ClientLinkManage
-    {
-        /// <summary>
-        /// 是否开启业务消息
-        /// </summary>
-        public static bool IsMessage = false;
-        /// <summary>
-        /// 业务消息触发时间间隔，单位秒
-        /// </summary>
-        public static int MessageTime = 1;//默认间隔1秒
-        /// <summary>
-        /// 登陆后缓存令牌
-        /// </summary>
-        public static string Token = null;//
-
-        /// <summary>
-        /// 缓存的客户连接
-        /// </summary>
-        private static Dictionary<string, ClientLink> ClientLinkDic = new Dictionary<string, ClientLink>();
-        /// <summary>
-        /// 创建wcf服务连接,此方式一个服务只有一个连接
-        /// </summary>
-        public static ClientLink CreateConnection(string pluginname)
-        {
-            try
-            {
-                if (ClientLinkDic.ContainsKey(pluginname))
-                {
-                    return ClientLinkDic[pluginname];
-                }
-
-                ClientLink link = new ClientLink(null, pluginname, ((ism, met) =>
-                {
-                    IsMessage = ism;
-                    MessageTime = met;
-                }));
-                link.CreateConnection();
-                link.mConn.Token = Token;//赋值令牌
-                ClientLinkDic.Add(pluginname, link);
-                return link;
-            }
-            catch (Exception err)
-            {
-                throw new Exception(err.Message);
-            }
-        }
-
-        public static ClientLink CreateConnection(string pluginname, string key)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// 卸载连接
-        /// </summary>
-        public static void UnConnection(string pluginname)
-        {
-            if (ClientLinkDic.Count == 0) return;
-            if (ClientLinkDic.ContainsKey(pluginname) == false) return;
-            ClientLinkDic[pluginname].Dispose();
-            ClientLinkDic.Remove(pluginname);
-        }
-
-        /// <summary>
-        /// 关闭所有连接
-        /// </summary>
-        public static void UnAllConnection()
-        {
-            if (ClientLinkDic.Count == 0) return;
-            foreach (var c in ClientLinkDic)
-            {
-                c.Value.Dispose();
-            }
-            ClientLinkDic.Clear();
-        }
-    }
-
-    public class ClientPool
-    {
-        public string key { get; set; }
-        public string pluginname { get; set; }
-        public ClientLink clientLink { get; set; }
-    }
 }

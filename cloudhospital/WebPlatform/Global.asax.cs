@@ -6,6 +6,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 using EFWCoreLib.CoreFrame.Init;
+using EFWCoreLib.WcfFrame;
 
 namespace EFWWeb
 {
@@ -19,6 +20,9 @@ namespace EFWWeb
             AppGlobal.AppStart();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
+
+            //初始化连接池
+            ClientLinkPoolCache.Init(true, 500, 30, 600, "efwplusweb", 30);
         }
 
         protected void Application_End(object sender, EventArgs e)

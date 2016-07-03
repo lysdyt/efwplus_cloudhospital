@@ -39,6 +39,7 @@ namespace EFWCoreLib.WcfFrame.ServerController
         public static int MessageTime = 1;//默认间隔1秒
         public static bool IsCompressJson = false;//是否压缩Json数据
         public static bool IsEncryptionJson = false;//是否加密Json数据
+        public static bool IsToken = false;//是否开启身份验证
         public static SerializeType serializeType = SerializeType.Newtonsoft;//序列化方式
         public static bool IsOverTime = false;//开启超时记录
         public static int OverTime = 1;//超时记录日志
@@ -131,10 +132,10 @@ namespace EFWCoreLib.WcfFrame.ServerController
                     ClientInfo = wcfClientDic[clientId].Clone() as WCFClientInfo;
                 }
 
-                if (WcfServerManage.IsDebug == false)//非调试模式下才验证
+                if (WcfServerManage.IsToken == true)//非调试模式下才验证
                 {
                     //验证身份，创建连接的时候验证，请求不验证
-                    //IsAuth(plugin, controller, method, token, ClientInfo);
+                    IsAuth(plugin, controller, method, para.token, ClientInfo);
                 }
 
                 //显示调试信息

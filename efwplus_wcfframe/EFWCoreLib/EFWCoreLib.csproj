@@ -260,9 +260,14 @@
     </Compile>
     <Compile Include="UnitTestFrame\BaseDaoUnitTest.cs" />
     <Compile Include="UnitTestFrame\wcfBaseUnitTest.cs" />
+    <Compile Include="WcfFrame\ClientLink\ClientLinkPoolCache.cs" />
+    <Compile Include="WcfFrame\ClientLink\ClientLinkManage.cs" />
+    <Compile Include="WcfFrame\ClientLink\ClientLinkPool.cs" />
+    <Compile Include="WcfFrame\ClientLink\CHDEPConnection.cs" />
     <Compile Include="WcfFrame\DataSerialize\ClientRequestData.cs" />
     <Compile Include="WcfFrame\DataSerialize\SerializeType.cs" />
     <Compile Include="WcfFrame\DataSerialize\ServiceResponseData.cs" />
+    <Compile Include="WcfFrame\ClientLink\ReplyClientCallBack.cs" />
     <Compile Include="WcfFrame\SDMessageHeader\HeaderOperater.cs" />
     <Compile Include="WcfFrame\SDMessageHeader\HeaderParameter.cs" />
     <Compile Include="WcfFrame\ServerController\DistributedCacheManage.cs" />
@@ -376,7 +381,7 @@
     <Compile Include="CoreFrame\Business\AttributeInfo\WCFControllerAttribute.cs" />
     <Compile Include="CoreFrame\Business\AttributeInfo\WCFMethodAttribute.cs" />
     <Compile Include="WcfFrame\ClientController\WcfClientController.cs" />
-    <Compile Include="WcfFrame\ClientLink.cs" />
+    <Compile Include="WcfFrame\ClientLink\ClientLink.cs" />
     <Compile Include="WcfFrame\ServerController\ControllerHelper.cs" />
     <Compile Include="WcfFrame\ServerController\DebugWcfServices.cs" />
     <Compile Include="WcfFrame\ServerController\WcfServerController.cs" />

@@ -123,6 +123,8 @@ namespace EFWCoreLib.CoreFrame.Init
 
         public static WinformControllerAttributeInfo GetPluginWinformControllerAttributeInfo(string pluginname, string name, out ModulePlugin mp)
         {
+            if (PluginDic.ContainsKey(pluginname) == false)
+                throw new Exception("["+pluginname+"]插件模块并没有在pluginsys.xml配置文件中配置好！");
             mp = PluginDic[pluginname];
             if (mp != null)
             {

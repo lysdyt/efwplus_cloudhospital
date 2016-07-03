@@ -548,3 +548,145 @@ Win32 ThreadId:10008
 
 Extended Properties: 
 ----------------------------------------
+----------------------------------------
+Timestamp: 2016/7/3 14:43:26
+
+Message: HandlingInstanceID: 05e2d91f-113e-4c5d-9959-91a7e1613505
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+07/03/2016 22:43:26
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 调用的目标发生了异常。
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 EFWCoreLib.WebFrame.HttpHandler.HttpHandlerInvoker.CmdInvoke(HttpContext context)
+   在 EFWCoreLib.WebFrame.HttpHandler.APIHttpHandler.ProcessRequest(HttpContext context)
+
+Additional Info:
+
+MachineName : DESKTOP-28QSAH6
+TimeStamp : 2016/7/3 14:43:26
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/2/ROOT-1-131120305526356813
+ThreadIdentity : 
+WindowsIdentity : DESKTOP-28QSAH6\zenghao
+	Inner Exception
+	---------------
+	Type : System.Collections.Generic.KeyNotFoundException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : 给定关键字不在字典中。
+	Source : mscorlib
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : TValue get_Item(TKey)
+	HResult : -2146232969
+	Stack Trace :    在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+	   在 EFWCoreLib.WcfFrame.ClientLinkPoolCache.GetClientPool(String server_name)
+	   在 EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.fromPoolGetClientLink(String wcfpluginname, ClientLink& clientlink, Nullable`1& index)
+	   在 EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfService(String wcfpluginname, String wcfcontroller, String wcfmethod, Action`1 requestAction)
+	   在 EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfService(String wcfpluginname, String wcfcontroller, String wcfmethod)
+	   在 Books_Web.WebController.bookController.SearchBook() 位置 D:\efwplus_cloudhospital\cloudhospital\PluginWeb\实例Books\Books_Web\WebController\bookController.cs:行号 34
+
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-28QSAH6
+
+App Domain: /LM/W3SVC/2/ROOT-1-131120305526356813
+
+ProcessId: 1876
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:6148
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 2016/7/3 14:43:37
+
+Message: HandlingInstanceID: 2a7a3f35-c7a5-4b6f-b293-07dc300687d2
+An exception of type 'System.Reflection.TargetInvocationException' occurred and was caught.
+-------------------------------------------------------------------------------------------
+07/03/2016 22:43:37
+Type : System.Reflection.TargetInvocationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : 调用的目标发生了异常。
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
+HResult : -2146232828
+Stack Trace :    在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 EFWCoreLib.WebFrame.HttpHandler.HttpHandlerInvoker.CmdInvoke(HttpContext context)
+   在 EFWCoreLib.WebFrame.HttpHandler.APIHttpHandler.ProcessRequest(HttpContext context)
+
+Additional Info:
+
+MachineName : DESKTOP-28QSAH6
+TimeStamp : 2016/7/3 14:43:37
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : /LM/W3SVC/2/ROOT-1-131120305526356813
+ThreadIdentity : 
+WindowsIdentity : DESKTOP-28QSAH6\zenghao
+	Inner Exception
+	---------------
+	Type : System.Collections.Generic.KeyNotFoundException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+	Message : 给定关键字不在字典中。
+	Source : mscorlib
+	Help link : 
+	Data : System.Collections.ListDictionaryInternal
+	TargetSite : TValue get_Item(TKey)
+	HResult : -2146232969
+	Stack Trace :    在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+	   在 EFWCoreLib.WcfFrame.ClientLinkPoolCache.GetClientPool(String server_name)
+	   在 EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.fromPoolGetClientLink(String wcfpluginname, ClientLink& clientlink, Nullable`1& index)
+	   在 EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfService(String wcfpluginname, String wcfcontroller, String wcfmethod, Action`1 requestAction)
+	   在 EFWCoreLib.WebFrame.HttpHandler.Controller.WebHttpController.InvokeWcfService(String wcfpluginname, String wcfcontroller, String wcfmethod)
+	   在 Books_Web.WebController.bookController.SearchBook() 位置 D:\efwplus_cloudhospital\cloudhospital\PluginWeb\实例Books\Books_Web\WebController\bookController.cs:行号 34
+
+
+
+Category: FileLog
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: DESKTOP-28QSAH6
+
+App Domain: /LM/W3SVC/2/ROOT-1-131120305526356813
+
+ProcessId: 1876
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:12308
+
+Extended Properties: 
+----------------------------------------

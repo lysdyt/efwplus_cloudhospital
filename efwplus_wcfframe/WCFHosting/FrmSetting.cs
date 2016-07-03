@@ -33,6 +33,7 @@ namespace WCFHosting
             HostSettingConfig.SetValue("messagetime", txtmessagetime.Text);
             HostSettingConfig.SetValue("compress", ckJsoncompress.Checked ? "1" : "0");
             HostSettingConfig.SetValue("encryption", ckEncryption.Checked ? "1" : "0");
+            HostSettingConfig.SetValue("token", cktoken.Checked ? "1" : "0");
             HostSettingConfig.SetValue("overtime", ckovertime.Checked ? "1" : "0");
             HostSettingConfig.SetValue("overtimetime", txtovertime.Text);
             HostSettingConfig.SetValue("serializetype", cbSerializeType.SelectedIndex.ToString());
@@ -76,6 +77,7 @@ namespace WCFHosting
             txtmessagetime.Text = HostSettingConfig.GetValue("messagetime");
             ckJsoncompress.Checked = HostSettingConfig.GetValue("compress") == "1" ? true : false;
             ckEncryption.Checked = HostSettingConfig.GetValue("encryption") == "1" ? true : false;
+            cktoken.Checked = HostSettingConfig.GetValue("token") == "1" ? true : false;
             ckovertime.Checked = HostSettingConfig.GetValue("overtime") == "1" ? true : false;
             txtovertime.Text = HostSettingConfig.GetValue("overtimetime");
             cbSerializeType.SelectedIndex = Convert.ToInt32(HostSettingConfig.GetValue("serializetype"));

@@ -94,6 +94,7 @@ namespace WCFHosting
             WcfServerManage.MessageTime = Convert.ToInt32(HostSettingConfig.GetValue("messagetime"));
             WcfServerManage.IsCompressJson = HostSettingConfig.GetValue("compress") == "1" ? true : false;
             WcfServerManage.IsEncryptionJson = HostSettingConfig.GetValue("encryption") == "1" ? true : false;
+            WcfServerManage.IsToken = HostSettingConfig.GetValue("token") == "1" ? true : false;
             WcfServerManage.serializeType = (SerializeType)Convert.ToInt32(HostSettingConfig.GetValue("serializetype"));
             WcfServerManage.IsOverTime = HostSettingConfig.GetValue("overtime") == "1" ? true : false;
             WcfServerManage.OverTime = Convert.ToInt32(HostSettingConfig.GetValue("overtimetime"));
@@ -228,7 +229,7 @@ namespace WCFHosting
 
         private void FrmHosting_Load(object sender, EventArgs e)
         {
-            this.Text = "CHDEP 云医院数据交换平台【" + HostSettingConfig.GetValue("hostname") + "】";
+            this.Text = "CMDEP 云医疗数据交换平台【" + HostSettingConfig.GetValue("hostname") + "】";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.Icon = this.Icon;
             this.notifyIcon1.Text = this.Text;
@@ -317,6 +318,7 @@ namespace WCFHosting
                 try
                 {
                     WcfServerManage.UnCreateSuperClient();
+                    EFWCoreLib.WcfFrame.ClientLinkPoolCache.Dispose();
                 }
                 catch { }
                 this.Dispose(true);
@@ -335,7 +337,7 @@ namespace WCFHosting
             set.ShowDialog();
             if (set.isOk == true)
             {
-                this.Text = "CHDEP 云医院数据交换平台【" + HostSettingConfig.GetValue("hostname") + "】";
+                this.Text = "CMDEP 云医疗数据交换平台【" + HostSettingConfig.GetValue("hostname") + "】";
                 this.notifyIcon1.Text = this.Text;
             }
         }

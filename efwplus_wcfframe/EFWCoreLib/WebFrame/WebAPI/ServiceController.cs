@@ -20,7 +20,7 @@ namespace EFWCoreLib.WebFrame.WebAPI
     {
         //Accept: application/json
         //Content-Type: application/json
-        ///efwplusApi/coresys/service/get?wcfpluginname=Books.Service&wcfcontroller=bookWcfController&wcfmethod=GetBooks&jsondata=[]&token=111111
+        //efwplusApi/coresys/service/get?wcfpluginname=Books.Service&wcfcontroller=bookWcfController&wcfmethod=GetBooks&jsondata=[]&token=111111
         public Object Get([FromUri]ServiceParam para)
         {
             try

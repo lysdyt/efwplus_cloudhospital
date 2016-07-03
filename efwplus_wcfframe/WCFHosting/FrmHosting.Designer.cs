@@ -626,7 +626,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmHosting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CHDEP 云医院数据交换平台";
+            this.Text = "CMDEP 云医疗数据交换平台";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHosting_FormClosing);
             this.Load += new System.EventHandler(this.FrmHosting_Load);
             this.toolStrip1.ResumeLayout(false);
