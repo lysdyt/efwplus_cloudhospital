@@ -33,7 +33,8 @@ namespace EFWCoreLib.WebFrame.WebAPI
                 });
 
                 ServiceResponseData response = InvokeWcfService("Books.Service", "bookWcfController", "GetBooks", requestAction);
-                return JsonConvert.DeserializeObject(response.GetJsonData());
+                //return JsonConvert.DeserializeObject(response.GetJsonData());
+                return true;
             }
             catch (Exception err)
             {

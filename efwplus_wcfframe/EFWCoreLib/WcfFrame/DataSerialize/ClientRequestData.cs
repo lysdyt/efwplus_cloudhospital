@@ -1,4 +1,5 @@
 ﻿
+using EFWCoreLib.CoreFrame.Business;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ProtoBuf;
@@ -43,7 +44,9 @@ namespace EFWCoreLib.WcfFrame.DataSerialize
         bool _iscompressjson = false;
         bool _isencryptionjson = false;
         SerializeType _serializetype=SerializeType.Newtonsoft;
-
+        /// <summary>
+        /// 是否压缩
+        /// </summary>
         public bool Iscompressjson
         {
             get
@@ -56,7 +59,9 @@ namespace EFWCoreLib.WcfFrame.DataSerialize
                 _iscompressjson = value;
             }
         }
-
+        /// <summary>
+        /// 是否加密
+        /// </summary>
         public bool Isencryptionjson
         {
             get
@@ -69,7 +74,9 @@ namespace EFWCoreLib.WcfFrame.DataSerialize
                 _isencryptionjson = value;
             }
         }
-
+        /// <summary>
+        /// 数据序列化策略
+        /// </summary>
         public SerializeType Serializetype
         {
             get
@@ -82,6 +89,10 @@ namespace EFWCoreLib.WcfFrame.DataSerialize
                 _serializetype = value;
             }
         }
+        /// <summary>
+        /// 登录信息
+        /// </summary>
+        public SysLoginRight LoginRight { get; set; }
 
         /// <summary>
         /// 添加输入数据

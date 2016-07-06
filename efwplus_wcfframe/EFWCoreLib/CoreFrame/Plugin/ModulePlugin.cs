@@ -188,12 +188,12 @@ namespace EFWCoreLib.CoreFrame.Plugin
             }
         }
 
-        public Object WcfServerExecuteMethod(string controllername, string methodname, object[] paramValue, ClientRequestData requestData, SysLoginRight loginRight)
+        public Object WcfServerExecuteMethod(string controllername, string methodname, object[] paramValue, ClientRequestData requestData)
         {
             EFWCoreLib.WcfFrame.ServerController.WcfServerController wscontroller = helper.CreateController(plugin.name, controllername) as EFWCoreLib.WcfFrame.ServerController.WcfServerController;
             wscontroller.requestData = requestData;
             wscontroller.responseData = new ServiceResponseData(requestData.Iscompressjson,requestData.Isencryptionjson,requestData.Serializetype);
-            wscontroller.BindLoginRight(loginRight);
+            wscontroller.BindLoginRight(requestData.LoginRight);
             MethodInfo methodinfo = helper.CreateMethodInfo(plugin.name, controllername, methodname, wscontroller);
             return methodinfo.Invoke(wscontroller, paramValue);
         }

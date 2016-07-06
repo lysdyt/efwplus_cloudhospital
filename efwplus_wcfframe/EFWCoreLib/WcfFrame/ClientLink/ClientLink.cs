@@ -16,6 +16,7 @@ using EFWCoreLib.WcfFrame.ServerController;
 using EFWCoreLib.WcfFrame.SDMessageHeader;
 using EFWCoreLib.WcfFrame.DataSerialize;
 using System.Threading;
+using EFWCoreLib.CoreFrame.Business;
 
 namespace EFWCoreLib.WcfFrame
 {
@@ -283,7 +284,7 @@ namespace EFWCoreLib.WcfFrame
                 IWCFHandlerService _wcfService = mConn.WcfService;
                 string retJson = "";
 
-                AddMessageHeader(_wcfService as IContextChannel, "", requestData.Iscompressjson, requestData.Isencryptionjson, requestData.Serializetype, (() =>
+                AddMessageHeader(_wcfService as IContextChannel, "", requestData.Iscompressjson, requestData.Isencryptionjson, requestData.Serializetype, requestData.LoginRight, (() =>
                    {
                        retJson = _wcfService.ProcessRequest(mConn.ClientID, mConn.PluginName + "@" + controller, method, jsondata);
                    }));
@@ -360,7 +361,7 @@ namespace EFWCoreLib.WcfFrame
                 IWCFHandlerService _wcfService = mConn.WcfService;
                 IAsyncResult result = null;
 
-                AddMessageHeader(_wcfService as IContextChannel, "", requestData.Iscompressjson, requestData.Isencryptionjson, requestData.Serializetype,  (() =>
+                AddMessageHeader(_wcfService as IContextChannel, "", requestData.Iscompressjson, requestData.Isencryptionjson, requestData.Serializetype, requestData.LoginRight,  (() =>
                 {
                     AsyncCallback callback = delegate(IAsyncResult r)
                     {
@@ -553,9 +554,9 @@ namespace EFWCoreLib.WcfFrame
 
         private void AddMessageHeader(IContextChannel channel, string cmd, Action callback)
         {
-            AddMessageHeader(channel, cmd, IsCompressJson, IsEncryptionJson, serializeType, callback);
+            AddMessageHeader(channel, cmd, IsCompressJson, IsEncryptionJson, serializeType, new SysLoginRight(), callback);
         }
-        private void AddMessageHeader(IContextChannel channel, string cmd,bool iscompressjson,bool isencryptionjson,SerializeType serializetype, Action callback)
+        private void AddMessageHeader(IContextChannel channel, string cmd, bool iscompressjson, bool isencryptionjson, SerializeType serializetype, SysLoginRight loginright, Action callback)
         {
             using (var scope = new OperationContextScope(channel as IContextChannel))
             {
@@ -571,6 +572,7 @@ namespace EFWCoreLib.WcfFrame
                 para.iscompressjson = iscompressjson;
                 para.isencryptionjson = isencryptionjson;
                 para.serializetype = serializetype;
+                para.LoginRight = loginright;
                 HeaderOperater.AddMessageHeader(OperationContext.Current.OutgoingMessageHeaders, para);
                 callback();
             }

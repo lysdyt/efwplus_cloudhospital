@@ -1,5 +1,6 @@
 ﻿using ProtoBuf;
 using System;
+using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 namespace EFWCoreLib.CoreFrame.Business
@@ -9,11 +10,13 @@ namespace EFWCoreLib.CoreFrame.Business
     /// </summary>
     [Serializable]
     [ProtoContract]
+    [DataContract]
     public class SysLoginRight
     {
         private int _userId;
         [XmlElement]
         [ProtoMember(1)]
+        [DataMember]
         public int UserId
         {
             get { return _userId; }
@@ -22,6 +25,7 @@ namespace EFWCoreLib.CoreFrame.Business
         private int _empId;
         [XmlElement]
         [ProtoMember(2)]
+        [DataMember]
         public int EmpId
         {
             get { return _empId; }
@@ -30,6 +34,7 @@ namespace EFWCoreLib.CoreFrame.Business
         private string _empName;
         [XmlElement]
         [ProtoMember(3)]
+        [DataMember]
         public string EmpName
         {
             get { return _empName; }
@@ -38,6 +43,7 @@ namespace EFWCoreLib.CoreFrame.Business
         private int _deptId;
         [XmlElement]
         [ProtoMember(4)]
+        [DataMember]
         public int DeptId
         {
             get { return _deptId; }
@@ -49,6 +55,7 @@ namespace EFWCoreLib.CoreFrame.Business
         /// </summary>
         [XmlElement]
         [ProtoMember(5)]
+        [DataMember]
         public string DeptName
         {
             get { return _deptName; }
@@ -57,6 +64,7 @@ namespace EFWCoreLib.CoreFrame.Business
         private int _workId;
         [XmlElement]
         [ProtoMember(6)]
+        [DataMember]
         public int WorkId
         {
             get { return _workId; }
@@ -66,6 +74,7 @@ namespace EFWCoreLib.CoreFrame.Business
         private string _workName;
         [XmlElement]
         [ProtoMember(7)]
+        [DataMember]
         public string WorkName
         {
             get { return _workName; }
@@ -74,6 +83,7 @@ namespace EFWCoreLib.CoreFrame.Business
 
         [XmlElement]
         [ProtoMember(8)]
+        [DataMember]
         public Guid token { get; set; }
     }
 }

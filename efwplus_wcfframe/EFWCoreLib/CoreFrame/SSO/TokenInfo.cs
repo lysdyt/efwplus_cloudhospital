@@ -29,11 +29,17 @@ namespace EFWCoreLib.CoreFrame.SSO
     public class UserInfo
     {
         [DataMember]
+        public int EmpId { get; set; }
+        [DataMember]
         public string UserId { get; set; }
         [DataMember]
         public string UserName { get; set; }
         [DataMember]
+        public int DeptId { get; set; }
+        [DataMember]
         public string DeptName { get; set; }
+        [DataMember]
+        public int WorkId { get; set; }
         [DataMember]
         public string WorkName { get; set; }
         [DataMember]

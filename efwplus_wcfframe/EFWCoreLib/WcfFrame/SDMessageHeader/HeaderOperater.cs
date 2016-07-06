@@ -1,4 +1,5 @@
-﻿using EFWCoreLib.WcfFrame.DataSerialize;
+﻿using EFWCoreLib.CoreFrame.Business;
+using EFWCoreLib.WcfFrame.DataSerialize;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace EFWCoreLib.WcfFrame.SDMessageHeader
 {
+    /// <summary>
+    /// wcf消息头处理
+    /// </summary>
     public class HeaderOperater
     {
         public static string ns = "http://www.efwplus.cn/";
@@ -21,6 +25,7 @@ namespace EFWCoreLib.WcfFrame.SDMessageHeader
             requestMessage.Headers.RemoveAll("IsCompressJson", ns);
             requestMessage.Headers.RemoveAll("IsEncryptionJson", ns);
             requestMessage.Headers.RemoveAll("SerializeType", ns);
+            requestMessage.Headers.RemoveAll("LoginRight", ns);
 
             var CMD = System.ServiceModel.Channels.MessageHeader.CreateHeader("CMD", ns, para.cmd);
             requestMessage.Headers.Add(CMD);
@@ -38,6 +43,8 @@ namespace EFWCoreLib.WcfFrame.SDMessageHeader
             requestMessage.Headers.Add(IsEncryptionJson);
             var SerializeType = System.ServiceModel.Channels.MessageHeader.CreateHeader("SerializeType", ns, Convert.ToString((int)para.serializetype));
             requestMessage.Headers.Add(SerializeType);
+            var LoginRight = System.ServiceModel.Channels.MessageHeader.CreateHeader("LoginRight", ns, para.LoginRight);
+            requestMessage.Headers.Add(LoginRight);
         }
 
         public static void AddMessageHeader(MessageHeaders headers, HeaderParameter para)
@@ -50,6 +57,7 @@ namespace EFWCoreLib.WcfFrame.SDMessageHeader
             headers.RemoveAll("IsCompressJson", ns);
             headers.RemoveAll("IsEncryptionJson", ns);
             headers.RemoveAll("SerializeType", ns);
+            headers.RemoveAll("LoginRight", ns);
 
             var CMD = System.ServiceModel.Channels.MessageHeader.CreateHeader("CMD", ns, para.cmd);
             headers.Add(CMD);
@@ -67,6 +75,8 @@ namespace EFWCoreLib.WcfFrame.SDMessageHeader
             headers.Add(IsEncryptionJson);
             var SerializeType = System.ServiceModel.Channels.MessageHeader.CreateHeader("SerializeType", ns, Convert.ToString((int)para.serializetype));
             headers.Add(SerializeType);
+            var LoginRight = System.ServiceModel.Channels.MessageHeader.CreateHeader("LoginRight", ns, para.LoginRight);
+            headers.Add(LoginRight);
         }
 
         public static HeaderParameter GetHeaderValue(Message requestMessage)
@@ -99,6 +109,9 @@ namespace EFWCoreLib.WcfFrame.SDMessageHeader
             index = headers.FindHeader("SerializeType", ns);
             if (index > -1)
                 para.serializetype = (SerializeType)Convert.ToInt32(headers.GetHeader<string>(index).Trim());
+            index = headers.FindHeader("LoginRight", ns);
+            if (index > -1)
+                para.LoginRight = headers.GetHeader<SysLoginRight>(index);
             return para;
         }
     }

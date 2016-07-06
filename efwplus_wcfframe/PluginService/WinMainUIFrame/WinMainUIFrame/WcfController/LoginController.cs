@@ -63,8 +63,8 @@ namespace WinMainUIFrame.WcfController
                         //ClientInfo.LoginRight = right;//缓存登录用户信息
                         //单点登录注册
                         Guid token = Guid.Empty;
-                        SsoHelper.SignIn(usercode, new UserInfo() { UserId = usercode, UserName = right.EmpName, DeptName = right.DeptName, WorkName = right.WorkName }, out token);
-
+                        SsoHelper.SignIn(usercode, new UserInfo() { UserId = usercode, EmpId = right.EmpId, UserName = right.EmpName, DeptId = right.DeptId, DeptName = right.DeptName, WorkId = right.WorkId, WorkName = right.WorkName }, out token);
+                        right.token = token;
 
                         responseData.AddData(right.EmpName);
                         responseData.AddData(right.DeptName);
@@ -73,7 +73,7 @@ namespace WinMainUIFrame.WcfController
                         responseData.AddData(NewObject<Menu>().GetMenuList(right.UserId));
                         responseData.AddData(NewObject<Dept>().GetHaveDept(right.EmpId));
                         responseData.AddData(right);
-                        
+
                         return responseData;
                     }
                     else

@@ -1,4 +1,5 @@
-﻿using EFWCoreLib.WcfFrame.DataSerialize;
+﻿using EFWCoreLib.CoreFrame.Business;
+using EFWCoreLib.WcfFrame.DataSerialize;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,11 @@ namespace EFWCoreLib.WcfFrame.SDMessageHeader
         /// </summary>
         [DataMember]
         public SerializeType serializetype { get; set; }
+
+        /// <summary>
+        /// 登录信息
+        /// </summary>
+        public SysLoginRight LoginRight { get; set; }
     }
     
 }

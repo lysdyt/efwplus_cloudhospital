@@ -44,8 +44,14 @@ namespace EFWCoreLib.WebFrame.WebAPI
 
 
                     SysLoginRight loginInfo = new SysLoginRight();
-                    loginInfo.UserId = Convert.ToInt32(result.User.UserId);
+                    loginInfo.EmpId = result.User.EmpId;
+                    //loginInfo.UserId =;
                     loginInfo.EmpName = result.User.UserName;
+                    loginInfo.DeptId = result.User.DeptId;
+                    loginInfo.DeptName = result.User.DeptName;
+                    loginInfo.WorkId = result.User.WorkId;
+                    loginInfo.WorkName = result.User.WorkName;
+                    loginInfo.token = Guid.Parse(result.token);
 
                     actionContext.Request.Properties[Key] = loginInfo;
                 }

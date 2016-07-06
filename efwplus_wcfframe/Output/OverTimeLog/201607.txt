@@ -1,0 +1,20 @@
+时间：2016/7/6 10:33:43		耗时：164188.2456		方法：LoginController.UserLogin(["\"admin\"","\"1\""])
+
+时间：2016/7/6 10:34:08		耗时：4473.5821		方法：LoginController.UserLogin(["\"admin\"","\"1\""])
+
+时间：2016/7/6 10:34:47		耗时：34430.2893		方法：bookWcfController.GetBooks([])
+
+时间：2016/7/6 10:35:24		耗时：5493.1504		方法：EmpUserController.LoadWorkerList([])
+
+时间：2016/7/6 10:35:31		耗时：3051.3052		方法：EmpUserController.GetCurrWorker(["1"])
+
+时间：2016/7/6 10:35:34		耗时：2921.9412		方法：EmpUserController.GetCurrWorker(["1"])
+
+时间：2016/7/6 10:38:45		耗时：3785.0217		方法：bookWcfController.GetBooks([])
+
+时间：2016/7/6 10:39:20		耗时：18175.114		方法：EmpUserController.LoadWorkerList([])
+
+时间：2016/7/6 10:44:30		耗时：9982.0173		方法：LoginController.UserLogin(["\"admin\"","\"1\""])
+
+时间：2016/7/6 10:44:43		耗时：9315.2851		方法：bookWcfController.GetBooks([])
+

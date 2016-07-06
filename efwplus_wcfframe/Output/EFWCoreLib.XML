@@ -3350,6 +3350,26 @@
             <param name="IsEncrytion">是否加密</param>
             <param name="SerializeType">序列化方式</param>
         </member>
+        <member name="P:EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData.Iscompressjson">
+            <summary>
+            是否压缩
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData.Isencryptionjson">
+            <summary>
+            是否加密
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData.Serializetype">
+            <summary>
+            数据序列化策略
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData.LoginRight">
+            <summary>
+            登录信息
+            </summary>
+        </member>
         <member name="M:EFWCoreLib.WcfFrame.DataSerialize.ClientRequestData.AddData``1(``0)">
             <summary>
             添加输入数据
@@ -3441,6 +3461,11 @@
             <param name="jsondata"></param>
             <returns></returns>
         </member>
+        <member name="T:EFWCoreLib.WcfFrame.SDMessageHeader.HeaderOperater">
+            <summary>
+            wcf消息头处理
+            </summary>
+        </member>
         <member name="T:EFWCoreLib.WcfFrame.SDMessageHeader.HeaderParameter">
             <summary>
             自定义消息头参数
@@ -3459,6 +3484,11 @@
         <member name="P:EFWCoreLib.WcfFrame.SDMessageHeader.HeaderParameter.serializetype">
             <summary>
             序列化类型
+            </summary>
+        </member>
+        <member name="P:EFWCoreLib.WcfFrame.SDMessageHeader.HeaderParameter.LoginRight">
+            <summary>
+            登录信息
             </summary>
         </member>
         <member name="T:EFWCoreLib.WcfFrame.ServerController.DistributedCacheManage">

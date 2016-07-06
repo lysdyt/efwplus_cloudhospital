@@ -119,7 +119,7 @@ namespace EFWCoreLib.WebFrame.WebAPI
         }
 
 
-        #region CHDEP通讯
+        #region CHDEP通讯，连接池方式
         private ClientLinkPool fromPoolGetClientLink(string wcfpluginname, out ClientLink clientlink, out int? index)
         {
             ClientLinkPool pool = ClientLinkPoolCache.GetClientPool("webapi");
@@ -201,7 +201,16 @@ namespace EFWCoreLib.WebFrame.WebAPI
             {
                 //Thread.Sleep(2000);
                 //ClientLink wcfClientLink = ClientLinkManage.CreateConnection(wcfpluginname);
-                retData = clientlink.Request(wcfcontroller, wcfmethod, requestAction);
+                //绑定LoginRight
+                Action<ClientRequestData> _requestAction = ((ClientRequestData request) =>
+                {
+                    if (Request.Properties.ContainsKey("__user_token__"))
+                        request.LoginRight = (SysLoginRight)Request.Properties["__user_token__"];
+                    if (requestAction != null)
+                        requestAction(request);
+                });
+
+                retData = clientlink.Request(wcfcontroller, wcfmethod, _requestAction);
             }
             catch (Exception ex){ throw ex; }
             finally
@@ -223,7 +232,15 @@ namespace EFWCoreLib.WebFrame.WebAPI
             try
             {
                 //ClientLink wcfClientLink = ClientLinkManage.CreateConnection(wcfpluginname);
-                result= clientlink.RequestAsync(wcfcontroller, wcfmethod, requestAction, responseAction);
+                //绑定LoginRight
+                Action<ClientRequestData> _requestAction = ((ClientRequestData request) =>
+                {
+                    if (Request.Properties.ContainsKey("__user_token__"))
+                        request.LoginRight = (SysLoginRight)Request.Properties["__user_token__"];
+                    if (requestAction != null)
+                        requestAction(request);
+                });
+                result = clientlink.RequestAsync(wcfcontroller, wcfmethod, _requestAction, responseAction);
             }
             catch (Exception ex) { throw ex; }
             finally

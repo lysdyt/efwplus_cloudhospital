@@ -70,10 +70,7 @@ namespace EFWCoreLib.WebFrame.WebAPI
     public class ServiceParam
     {
 
-        public string wcfpluginname
-        {
-            get; set;
-        }
+        public string wcfpluginname { get; set; }
         public string wcfcontroller { get; set; }
         public string wcfmethod { get; set; }
         public string jsondata { get; set; }

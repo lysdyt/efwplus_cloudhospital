@@ -53,6 +53,9 @@ namespace EFWCoreLib.WcfFrame.ServerController
 
             AppGlobal.AppStart();
 
+            //初始化连接池,默认10分钟清理连接
+            ClientLinkPoolCache.Init(true, 200, 30, 600, "wcfserver", 30);
+
             //初始化插件
             localPlugin = new LocalPlgin();
             RemotePluginDic = new List<RemotePlugin>();
@@ -114,28 +117,22 @@ namespace EFWCoreLib.WcfFrame.ServerController
             else
                 return false;
         }
-        public static string ProcessRequest(string clientId,string plugin, string controller, string method, string jsondata, HeaderParameter para)
+        public static string ProcessRequest(string clientId, string plugin, string controller, string method, string jsondata, HeaderParameter para)
         {
             string retJson = null;
-            WCFClientInfo ClientInfo = null;
+            //WCFClientInfo ClientInfo = null;
             try
             {
-                if(plugin==null || controller==null)
+                if (plugin == null || controller == null)
                     throw new Exception("插件名称或控制器名称不能为空!");
 
-
-                lock (wcfClientDic)
-                {
-                    if (wcfClientDic.ContainsKey(clientId) == false)
-                        throw new Exception("客户端不存在，正在创建新的连接！");
-
-                    ClientInfo = wcfClientDic[clientId].Clone() as WCFClientInfo;
-                }
+                if (wcfClientDic.ContainsKey(clientId) == false)
+                    throw new Exception("客户端不存在，正在创建新的连接！");
 
                 if (WcfServerManage.IsToken == true)//非调试模式下才验证
                 {
                     //验证身份，创建连接的时候验证，请求不验证
-                    IsAuth(plugin, controller, method, para.token, ClientInfo);
+                    IsAuth(plugin, controller, method, para.token);
                 }
 
                 //显示调试信息
@@ -161,12 +158,13 @@ namespace EFWCoreLib.WcfFrame.ServerController
 
                         ClientRequestData requestData = new ClientRequestData(para.iscompressjson, para.isencryptionjson, para.serializetype);
                         requestData.SetJsonData(_jsondata);
+                        requestData.LoginRight = para.LoginRight;
 
                         EFWCoreLib.CoreFrame.Plugin.ModulePlugin moduleplugin = localPlugin.PluginDic[plugin];
-                        retObj =(ServiceResponseData)moduleplugin.WcfServerExecuteMethod(controller, method, paramValue, requestData, ClientInfo.LoginRight);
+                        retObj = (ServiceResponseData)moduleplugin.WcfServerExecuteMethod(controller, method, paramValue, requestData);
 
                         if (retObj != null)
-                        {                            
+                        {
                             retJson = retObj.GetJsonData();
                         }
                         else
@@ -207,7 +205,7 @@ namespace EFWCoreLib.WcfFrame.ServerController
                         throw new Exception("远程插件找不到指定的回调中间件");
                 }
                 #endregion
-                
+
                 double outtime = endtime();
                 //记录超时的方法
                 if (WcfServerManage.IsOverTime == true)
@@ -301,7 +299,7 @@ namespace EFWCoreLib.WcfFrame.ServerController
         }
 
         //每次请求的身份验证，分布式情况下验证麻烦
-        static bool IsAuth(string pname, string cname, string methodname, string token, WCFClientInfo clientinfo)
+        static bool IsAuth(string pname, string cname, string methodname, string token)
         {
             ModulePlugin mp;
             WcfControllerAttributeInfo cattr = AppPluginManage.GetPluginWcfControllerAttributeInfo(pname, cname, out mp);
@@ -322,7 +320,7 @@ namespace EFWCoreLib.WcfFrame.ServerController
                 loginInfo.UserId = Convert.ToInt32(result.User.UserId);
                 loginInfo.EmpName = result.User.UserName;
 
-                clientinfo.LoginRight = loginInfo;
+                //clientinfo.LoginRight = loginInfo;
             }
 
             return true;
@@ -615,9 +613,10 @@ namespace EFWCoreLib.WcfFrame.ServerController
 
                         ClientRequestData requestData = new ClientRequestData(para.iscompressjson, para.isencryptionjson, para.serializetype);
                         requestData.SetJsonData(_jsondata);
+                        requestData.LoginRight = para.LoginRight;
 
                         EFWCoreLib.CoreFrame.Plugin.ModulePlugin moduleplugin = localPlugin.PluginDic[plugin];
-                        retObj = (ServiceResponseData)moduleplugin.WcfServerExecuteMethod(controller, method, paramValue, requestData, null);
+                        retObj = (ServiceResponseData)moduleplugin.WcfServerExecuteMethod(controller, method, paramValue, requestData);
 
                         if (retObj != null)
                         {
@@ -722,7 +721,8 @@ namespace EFWCoreLib.WcfFrame.ServerController
         public string ipAddress { get; set; }
         public DateTime startTime { get; set; }
         public IClientService callbackClient { get; set; }
-        public SysLoginRight LoginRight { get; set; }
+        //public SysLoginRight LoginRight { get; set; }
+        //这个不能放这里,重新创建连接和分布式调用都会丢失LoginRight
         public int HeartbeatCount { get; set; }
         /// <summary>
         /// 是否连接

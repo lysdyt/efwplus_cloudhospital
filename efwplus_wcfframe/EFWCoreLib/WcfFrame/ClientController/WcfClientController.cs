@@ -103,14 +103,28 @@ namespace EFWCoreLib.WcfFrame.ClientController
         public ServiceResponseData InvokeWcfService(string wcfpluginname, string wcfcontroller, string wcfmethod, Action<ClientRequestData> requestAction)
         {
             ClientLink wcfClientLink = ClientLinkManage.CreateConnection(wcfpluginname);
-            ServiceResponseData retData = wcfClientLink.Request(wcfcontroller, wcfmethod, requestAction);
+            //绑定LoginRight
+            Action<ClientRequestData> _requestAction = ((ClientRequestData request) =>
+            {
+                request.LoginRight = LoginUserInfo;
+                if (requestAction != null)
+                    requestAction(request);
+            });
+            ServiceResponseData retData = wcfClientLink.Request(wcfcontroller, wcfmethod, _requestAction);
             return retData;
         }
 
         public IAsyncResult InvokeWcfServiceAsync(string wcfpluginname, string wcfcontroller, string wcfmethod, Action<ClientRequestData> requestAction, Action<ServiceResponseData> responseAction)
         {
             ClientLink wcfClientLink = ClientLinkManage.CreateConnection(wcfpluginname);
-            return wcfClientLink.RequestAsync(wcfcontroller, wcfmethod, requestAction, responseAction);
+            //绑定LoginRight
+            Action<ClientRequestData> _requestAction = ((ClientRequestData request) =>
+            {
+                request.LoginRight = LoginUserInfo;
+                if (requestAction != null)
+                    requestAction(request);
+            });
+            return wcfClientLink.RequestAsync(wcfcontroller, wcfmethod, _requestAction, responseAction);
         }
         #endregion
     }
